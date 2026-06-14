@@ -4,7 +4,7 @@ import type { Lang, PROJECTS } from "@/lib/data";
 
 type Project = (typeof PROJECTS)[number];
 
-export function ProjectCard({ p, lang, onOpen }: { p: Project; lang: Lang; onOpen: (p: Project) => void }) {
+export function ProjectCard({ p, lang }: { p: Project; lang: Lang }) {
   const ref = useRef<HTMLElement>(null);
 
   const onMouseMove = (e: React.MouseEvent) => {
@@ -25,13 +25,18 @@ export function ProjectCard({ p, lang, onOpen }: { p: Project; lang: Lang; onOpe
 
   const img = (p as typeof p & { image?: string }).image;
 
+  const handleClick = () => {
+    if (p.url) window.open(p.url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <article
       ref={ref}
       className="proj-card reveal"
-      onClick={() => onOpen(p)}
+      onClick={handleClick}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
+      style={{ cursor: p.url ? "pointer" : "default" }}
     >
       {img && (
         <div className="proj-card-img">
@@ -50,7 +55,7 @@ export function ProjectCard({ p, lang, onOpen }: { p: Project; lang: Lang; onOpe
         </div>
         <div className="proj-bottom">
           <span className="view-link">
-            {lang === "en" ? "View project" : "Shiko projektin"} <span className="arr">→</span>
+            {lang === "en" ? "Visit site" : "Vizito faqen"} <span className="arr">↗</span>
           </span>
         </div>
       </div>

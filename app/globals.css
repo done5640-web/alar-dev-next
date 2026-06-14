@@ -557,6 +557,7 @@ input.f.err, select.f.err, textarea.f.err { border-color: #ef4444; }
 .fan-carousel {
   width: 100%; padding: 60px 0 40px;
   position: relative; display: flex; align-items: center;
+  touch-action: pan-y;
 }
 .fan-stage {
   position: relative; height: 520px; flex: 1;
@@ -782,9 +783,10 @@ input.f.err, select.f.err, textarea.f.err { border-color: #ef4444; }
   /* Pricing */
   .pricing-grid { grid-template-columns: 1fr; }
   .pricing-price { font-size: 40px; }
-  /* Why editorial */
+  /* Why editorial — stack on mobile, show photo below */
   .why-editorial { grid-template-columns: 1fr; }
-  .why-editorial-right { display: none; }
+  .why-editorial-right { display: block; margin-top: 32px; }
+  .why-photo { max-height: 280px; object-fit: cover; border-radius: 16px; }
   /* About */
   .stack-logos-grid { grid-template-columns: repeat(3, 1fr); }
   .why-about-grid { grid-template-columns: 1fr; }
@@ -1107,7 +1109,7 @@ nav.top.scrolled {
 
 .mob-backdrop {
   position: fixed; inset: 0; top: 72px; z-index: 997;
-  background: rgba(0,0,0,0.3);
+  background: transparent;
 }
 
 /* Hamburger X animation */
@@ -1126,9 +1128,9 @@ nav.top.scrolled {
 @media (max-width: 767px) {
   .desktop-only { display: none !important; }
   .nav-cta { display: none !important; }
-  /* Show pills on mobile — smaller and repositioned */
-  .fp1 { display: block !important; top: auto; bottom: 18%; right: 4%; font-size: 10px; padding: 6px 12px; }
-  .fp3 { display: block !important; bottom: 10%; right: auto; left: 4%; font-size: 10px; padding: 6px 12px; }
+  /* Show pills on mobile — spread across hero */
+  .fp1 { display: block !important; top: 22%; bottom: auto; right: 4%; left: auto; font-size: 10px; padding: 6px 12px; }
+  .fp3 { display: block !important; top: 42%; bottom: auto; left: 4%; right: auto; font-size: 10px; padding: 6px 12px; }
   .fp2, .fp4 { display: none !important; }
   .hero-ctas { flex-direction: column; align-items: stretch; }
   .hero-ctas .btn { text-align: center; justify-content: center; }
