@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Krijim Website & Web Design Albania | ALAR DEV",
     description:
-      "Studio profesionale për krijim website dhe web design në Shqipëri. Faqe interneti nga €150, aplikacione mobile, e-commerce. Dorëzim i shpejtë, pronësi e plotë.",
+      "Studio profesionale për krijim website dhe web design në Shqipëri. Aplikacione mobile, e-commerce dhe software me porosi. Dorëzim i shpejtë, pronësi e plotë.",
     url: "https://alardev.al",
     siteName: "ALAR DEV",
     locale: "en_US",
