@@ -5,7 +5,7 @@ import type { Lang } from "@/lib/data";
 import type { Post } from "@/lib/blog";
 import RevealObserver from "@/components/RevealObserver";
 
-export default function BlogPostClient({ post }: { post: Post }) {
+export default function BlogPostClient({ post, related = [] }: { post: Post; related?: Post[] }) {
   const { lang } = useLang();
   const l = lang as Lang;
   const data = post[l];
@@ -60,6 +60,25 @@ export default function BlogPostClient({ post }: { post: Post }) {
               return null;
             })}
           </div>
+
+          {related.length > 0 && (
+            <div className="blog-related reveal">
+              <div className="section-label">{l === "en" ? "RELATED ARTICLES" : "ARTIKUJ TË NGJASHËM"}</div>
+              <div className="blog-related-grid">
+                {related.map((r) => (
+                  <Link key={r.slug} href={`/blog/${r.slug}`} className="blog-related-card">
+                    <img src={r.image} alt={r[l].title} className="blog-related-img" />
+                    <div className="blog-related-body">
+                      <span className="blog-related-date">
+                        {new Date(r.date).toLocaleDateString(l === "sq" ? "sq-AL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}
+                      </span>
+                      <p className="blog-related-title">{r[l].title}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="blog-post-footer reveal">
             <div className="section-label">{l === "en" ? "MORE ARTICLES" : "MË SHUMË ARTIKUJ"}</div>

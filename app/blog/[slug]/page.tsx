@@ -3,6 +3,27 @@ import { notFound } from "next/navigation";
 import { POSTS, getPost } from "@/lib/blog";
 import BlogPostClient from "@/components/blog/BlogPostClient";
 
+function buildJsonLd(post: NonNullable<ReturnType<typeof getPost>>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.en.title,
+    description: post.en.excerpt,
+    image: post.image,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { "@type": "Organization", name: "ALAR DEV", url: "https://alardev.al" },
+    publisher: {
+      "@type": "Organization",
+      name: "ALAR DEV",
+      logo: { "@type": "ImageObject", url: "https://alardev.al/favicon.svg" },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://alardev.al/blog/${post.slug}` },
+    keywords: [...post.en.keywords, ...post.sq.keywords].join(", "),
+    inLanguage: ["en", "sq"],
+  };
+}
+
 export function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
 }
@@ -34,5 +55,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
-  return <BlogPostClient post={post} />;
+  const jsonLd = buildJsonLd(post);
+  const related = POSTS.filter((p) => p.slug !== slug).slice(0, 3);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BlogPostClient post={post} related={related} />
+    </>
+  );
 }
