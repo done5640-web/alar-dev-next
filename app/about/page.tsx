@@ -26,13 +26,13 @@ export default function AboutPage() {
             <div>
               <p>
                 {lang === "en"
-                  ? "We're a small team of engineers and designers who care deeply about the craft of software. We've spent years building products across industries — from HR platforms to logistics apps — and we've learned what separates good software from great software: attention to detail, honest communication, and a genuine obsession with quality."
-                  : "Jemi një ekip i vogël inxhinierësh dhe dizajnerësh që kujdesemi thellësisht për mjeshtërinë e softuerit. Kemi kaluar vite duke ndërtuar produkte në industri të ndryshme — nga platforma HR te aplikacione logjistike — dhe kemi mësuar se çfarë e dallon softuerin e mirë nga ai i shkëlqyer: vëmendja ndaj detajit, komunikimi i ndershëm dhe një obsesion i vërtetë për cilësinë."}
+                  ? "At Alar Dev, we combine the latest technology with creative solutions to build digital products that stand out. Our focus is on quality, efficiency, and measurable results. Every project we undertake is handled with complete dedication and professionalism, ensuring sustainable and scalable solutions for the future."
+                  : "Në Alar Dev, ne kombinojmë teknologjinë më të fundit me zgjidhje kreative për të ndërtuar produkte digjitale që dallohen. Fokusi ynë është cilësia, efikasiteti dhe rezultatet e matshme. Çdo projekt që marrim përsipër trajtohet me përkushtim dhe profesionalizëm të plotë, duke garantuar zgjidhje të qëndrueshme dhe të shkallëzueshme për të ardhmen."}
               </p>
               <p>
                 {lang === "en"
-                  ? "We work with startups and established companies alike. Whether you need to launch fast or rebuild something the right way, we approach every project with the same rigor and care."
-                  : "Punojmë me startup dhe me kompani të konsoliduara. Qoftë për të lansuar shpejt apo për të rindërtuar diçka siç duhet, çdo projekt e trajtojmë me të njëjtën rigorozitet dhe kujdes."}
+                  ? "We work with local businesses and startups across Albania. Whether you need a professional website, a custom web application, or ongoing maintenance — we bring the same care and professionalism to every project."
+                  : "Punojmë me biznese lokale dhe startup në të gjithë Shqipërinë. Qoftë për një faqe profesionale, një aplikacion web të personalizuar, apo mirëmbajtje të vazhdueshme — sjellim të njëjtin kujdes dhe profesionalizëm në çdo projekt."}
               </p>
             </div>
             <div className="story-deco">

@@ -29,7 +29,14 @@ export default function ContactPage() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 6 L20 6 L20 18 L4 18 Z"/><path d="M4 6 L12 13 L20 6"/></svg>
               <div>
                 <div className="lbl">Email</div>
-                <a className="val" href="mailto:hello@alar.dev">hello@alar.dev</a>
+                <a className="val" href="mailto:alar.dev2@gmail.com">alar.dev2@gmail.com</a>
+              </div>
+            </div>
+            <div className="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.19h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.93-.97a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+              <div>
+                <div className="lbl">{t("Phone", "Telefon")}</div>
+                <a className="val" href="tel:+355694712357">+355 69 471 2357</a>
               </div>
             </div>
             <div className="info-item">

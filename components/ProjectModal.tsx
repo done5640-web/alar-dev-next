@@ -25,19 +25,8 @@ export function ProjectModal({ project, lang, onClose }: { project: Project | nu
         <div className="tech-row" style={{ marginTop: 12 }}>
           {project.tech.map((t) => <span key={t} className="tech-pill">{t}</span>)}
         </div>
-        <div className="screens">
-          {[0, 1].map((i) => (
-            <div key={i} className="screen">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <rect x="3" y="6" width="18" height="14" rx="2" /><circle cx="12" cy="13" r="3.5" /><path d="M8 6 L10 4 H14 L16 6" />
-              </svg>
-              <span>Screenshot</span>
-            </div>
-          ))}
-        </div>
         <div className="modal-actions">
-          <a className="btn btn-primary" href="#">View Live →</a>
-          <a className="btn btn-ghost" href="#">GitHub →</a>
+          {project.url && <a className="btn btn-primary" href={project.url} target="_blank" rel="noopener noreferrer">Visit Site →</a>}
         </div>
       </div>
     </div>

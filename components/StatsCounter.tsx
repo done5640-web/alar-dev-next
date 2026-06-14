@@ -3,10 +3,10 @@ import { useEffect, useRef } from "react";
 import { useLang } from "@/lib/i18n";
 
 const stats = [
-  { target: 40, suffix: "+", label: { en: "Projects Delivered", sq: "Projekte të Realizuara" } },
-  { target: 6, suffix: "", label: { en: "Years of Experience", sq: "Vite Eksperience" } },
-  { target: 98, suffix: "%", label: { en: "Client Satisfaction", sq: "Kënaqësi e Klientit" } },
-  { target: 12, suffix: "", label: { en: "Industries Served", sq: "Industri të Shërbyera" } },
+  { target: 50, suffix: "+", label: { en: "Projects Delivered", sq: "Projekte të Realizuara" } },
+  { target: 30, suffix: "+", label: { en: "Happy Clients", sq: "Klientë të Kënaqur" } },
+  { target: 100, suffix: "%", label: { en: "Quality Guaranteed", sq: "Cilësi e Garantuar" } },
+  { target: 3, suffix: "", label: { en: "Years of Experience", sq: "Vite Eksperience" } },
 ];
 
 export default function StatsCounter() {

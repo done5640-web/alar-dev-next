@@ -33,22 +33,22 @@ export default function HomePage() {
           <div className="section-label">✦ SOFTWARE STUDIO · EST. 2019</div>
           <h1 className="hero-headline">
             {lang === "en" ? (
-              <>We engineer software<br />that <span className="gradient-text">scales.</span></>
+              <>Software solutions<br />for your <span className="gradient-text">success.</span></>
             ) : (
-              <>Ndërtojmë softuer që<br /><span className="gradient-text">shkëlqen.</span></>
+              <>Zgjidhje software<br />për <span className="gradient-text">suksesin tuaj.</span></>
             )}
           </h1>
           <p className="hero-sub">
             {lang === "en"
-              ? "Full-stack product teams. From architecture to deployment — we build the software your business runs on."
-              : "Ekipe të plota produkti. Nga arkitektura deri në lansim — ne ndërtojmë softuerin mbi të cilin biznesi juaj funksionon."}
+              ? "Creating web and mobile applications that turn startups and businesses into industry leaders."
+              : "Krijojmë aplikacione web dhe mobile që kthejnë startup-et dhe bizneset në liderë të industrisë."}
           </p>
           <div className="hero-ctas">
             <Link href="/contact" className="btn btn-primary btn-lg">
-              {lang === "en" ? "Start a project →" : "Fillo një projekt →"}
+              {lang === "en" ? "Start Your Project →" : "Fillo Projektin →"}
             </Link>
             <Link href="/projects" className="btn btn-ghost btn-lg">
-              {lang === "en" ? "See our work" : "Shiko punën tonë"}
+              {lang === "en" ? "See Our Work" : "Shiko Punën Tonë"}
             </Link>
           </div>
         </div>

@@ -5,11 +5,13 @@ import { useLang } from "@/lib/i18n";
 export default function ContactForm() {
   const { lang } = useLang();
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [errors, setErrors] = useState<Record<string, boolean>>({});
 
   const t = (en: string, sq: string) => lang === "en" ? en : sq;
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const errs: Record<string, boolean> = {};
@@ -18,7 +20,37 @@ export default function ContactForm() {
       if (!f.value.trim()) { errs[f.name] = true; ok = false; }
     });
     setErrors(errs);
-    if (ok) setSent(true);
+    if (!ok) return;
+
+    setLoading(true);
+    setError(false);
+
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "b299bb79-0a44-41fe-a9ad-8576ab9a7e94",
+          from_name: "Alar Dev Website",
+          subject: `New Contact Form Submission from ${data.name}`,
+          ...data,
+        }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        setSent(true);
+        form.reset();
+      } else {
+        throw new Error("Failed");
+      }
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 5000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const clearErr = (name: string) => setErrors((p) => ({ ...p, [name]: false }));
@@ -53,29 +85,26 @@ export default function ContactForm() {
         <select className={`f${errors.type ? " err" : ""}`} name="type" required onChange={() => clearErr("type")} defaultValue="">
           <option value="">{t("Choose a type", "Zgjidhni llojin")}</option>
           <option>{t("Web Application", "Aplikacion Web")}</option>
+          <option>{t("Business Website", "Website Biznesi")}</option>
           <option>{t("Mobile App", "Aplikacion Mobile")}</option>
-          <option>{t("Custom Software", "Softuer i Personalizuar")}</option>
+          <option>{t("App Maintenance", "Mirëmbajtje Aplikacioni")}</option>
           <option>{t("Other", "Tjetër")}</option>
         </select>
         {errors.type && <div className="field-err show">{t("This field is required", "Kjo fushë është e detyrueshme")}</div>}
       </div>
       <div className="form-row">
-        <label>{t("Budget Range", "Buxheti")}</label>
-        <select className={`f${errors.budget ? " err" : ""}`} name="budget" required onChange={() => clearErr("budget")} defaultValue="">
-          <option value="">{t("Choose a range", "Zgjidhni buxhetin")}</option>
-          <option>Under $5,000</option>
-          <option>$5,000 – $15,000</option>
-          <option>$15,000 – $50,000</option>
-          <option>$50,000+</option>
-        </select>
-        {errors.budget && <div className="field-err show">{t("This field is required", "Kjo fushë është e detyrueshme")}</div>}
-      </div>
-      <div className="form-row">
         <label>{t("Message", "Mesazhi")}</label>
-        <textarea className={`f${errors.message ? " err" : ""}`} name="message" rows={5} placeholder={t("Tell us about your project, goals, and timeline...", "Tregoni për projektin, qëllimet dhe afatin tuaj...")} required onChange={() => clearErr("message")} />
+        <textarea className={`f${errors.message ? " err" : ""}`} name="message" rows={5} placeholder={t("Tell us more about your project...", "Tregoni më shumë për projektin tuaj...")} required onChange={() => clearErr("message")} />
         {errors.message && <div className="field-err show">{t("This field is required", "Kjo fushë është e detyrueshme")}</div>}
       </div>
-      <button type="submit" className="btn btn-primary btn-lg">{t("Send message →", "Dërgo mesazhin →")}</button>
+      {error && (
+        <div style={{ padding: "12px 16px", borderRadius: 8, background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)", color: "#f87171", fontSize: 14 }}>
+          {t("An error occurred. Please try again or email us directly.", "Ndodhi një gabim. Ju lutem provoni përsëri ose na kontaktoni direkt.")}
+        </div>
+      )}
+      <button type="submit" className="btn btn-primary btn-lg" disabled={loading}>
+        {loading ? t("Sending...", "Duke dërguar...") : t("Send message →", "Dërgo mesazhin →")}
+      </button>
     </form>
   );
 }
