@@ -25,6 +25,9 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  // Close menu on route change
+  useEffect(() => { setOpen(false); }, [pathname]);
+
   return (
     <>
       <nav className={`top${scrolled ? " scrolled" : ""}`}>
@@ -34,6 +37,7 @@ export default function Nav() {
             <span className="brand-text">ALAR DEV</span>
           </Link>
 
+          {/* Desktop links */}
           <div className="nav-links">
             {links.map((l) => {
               const isActive = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
@@ -46,39 +50,52 @@ export default function Nav() {
           </div>
 
           <div className="nav-right">
+            {/* Language toggle — visible on all screen sizes */}
             <div className="lang-toggle">
               <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")}>EN</button>
               <span className="lang-pipe" />
               <button className={lang === "sq" ? "active" : ""} onClick={() => setLang("sq")}>SQ</button>
             </div>
-            <Link href="/contact" className="nav-cta">
+            {/* CTA — desktop only */}
+            <Link href="/contact" className="nav-cta desktop-only">
               {lang === "en" ? "Start a Project" : "Nis Projektin"}
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
             </Link>
-            <button className="hamburger" onClick={() => setOpen(true)} aria-label="Menu">
-              <span /><span /><span />
+            {/* Burger — mobile only */}
+            <button className="hamburger" onClick={() => setOpen((v) => !v)} aria-label="Menu" aria-expanded={open}>
+              <span className={open ? "open" : ""} />
+              <span className={open ? "open" : ""} />
+              <span className={open ? "open" : ""} />
             </button>
           </div>
         </div>
       </nav>
 
-      <div className={`mobile-overlay${open ? " open" : ""}`}>
-        <button className="mobile-close" onClick={() => setOpen(false)}>×</button>
-        {links.map((l) => (
-          <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="mob-link">
-            {l.label[lang]}
+      {/* Slide-down mobile menu */}
+      <div className={`mobile-menu${open ? " open" : ""}`}>
+        <div className="mobile-menu-inner">
+          {links.map((l) => {
+            const isActive = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className={`mob-link${isActive ? " active" : ""}`}
+              >
+                {l.label[lang]}
+              </Link>
+            );
+          })}
+          <div className="mob-divider" />
+          <Link href="/contact" className="mob-cta" onClick={() => setOpen(false)}>
+            {lang === "en" ? "Start a Project →" : "Nis Projektin →"}
           </Link>
-        ))}
-        <div className="mob-lang">
-          <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")}>EN</button>
-          <span className="lang-pipe" />
-          <button className={lang === "sq" ? "active" : ""} onClick={() => setLang("sq")}>SQ</button>
         </div>
-        <Link href="/contact" className="nav-cta" onClick={() => setOpen(false)}>
-          {lang === "en" ? "Start a Project" : "Nis Projektin"}
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
-        </Link>
       </div>
+
+      {/* Backdrop */}
+      {open && <div className="mob-backdrop" onClick={() => setOpen(false)} />}
     </>
   );
 }

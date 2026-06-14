@@ -166,16 +166,20 @@ export default function AboutPage() {
                 <h2 className="section-head" style={{ textAlign: "left", marginTop: 16 }}>
                   {lang === "en" ? <>Why work with <span className="gradient-text">ALAR DEV</span></> : <>Pse të punoni me <span className="gradient-text">ALAR DEV</span></>}
                 </h2>
-                <div className="why-list">
-                  {WHY.map((w, i) => (
-                    <div key={i} className="why-row">
-                      <div className="why-row-num">0{i + 1}</div>
-                      <div>
-                        <h4 className="why-row-title">{w.t[lang as Lang]}</h4>
-                        <p className="why-row-desc">{w.d[lang as Lang]}</p>
-                      </div>
-                    </div>
-                  ))}
+                <div className="why-para-block">
+                  {lang === "en" ? (
+                    <>
+                      <p>We've spent years building digital products for Albanian businesses — and we know what actually works. We move fast, we communicate clearly, and we treat every project like our own.</p>
+                      <p>Most sites launch in 7–14 days. You own everything: the code, the domain, the hosting. No lock-in, no hidden fees, no surprises. And when we're done, we don't disappear — we stay as your long-term tech partner.</p>
+                      <p>50+ projects delivered. Our clients come back because the work speaks for itself.</p>
+                    </>
+                  ) : (
+                    <>
+                      <p>Kemi kaluar vite duke ndërtuar produkte digjitale për biznese shqiptare — dhe e dimë çfarë funksionon. Lëvizim shpejt, komunikojmë qartë dhe trajtojmë çdo projekt si të ytin.</p>
+                      <p>Shumica e faqeve lansohen në 7–14 ditë. Ju zotëroni gjithçka: kodin, domenin, hostingun. Pa kufizime, pa tarifa të fshehura, pa surpriza. Dhe kur mbarojmë, nuk zhdukem — mbetemi partneri juaj afatgjatë.</p>
+                      <p>50+ projekte të dorëzuara. Klientët kthehen sepse puna flet vetë.</p>
+                    </>
+                  )}
                 </div>
                 <Link href="/contact" className="btn btn-primary" style={{ marginTop: 40, alignSelf: "flex-start" }}>
                   {lang === "en" ? "Start your project →" : "Fillo projektin →"}
@@ -184,8 +188,8 @@ export default function AboutPage() {
               <div className="why-editorial-right">
                 <div className="why-photo-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=900&auto=format&fit=crop"
-                    alt="ALAR DEV team at work"
+                    src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop"
+                    alt="ALAR DEV workspace"
                     className="why-photo"
                   />
                   <div className="why-photo-badge">

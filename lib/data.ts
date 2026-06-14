@@ -7,7 +7,8 @@ export const PROJECTS = [
     cat: "Car Rental",
     catKey: "Web App",
     url: "https://www.kdautocar.al",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop",
+    image: "/projects/desktop/kd-desktop.png",
+    imageMobile: "/projects/mobile/kd-mobile.jpeg",
     desc: {
       en: "Modern car rental platform with online booking, fleet catalog, and real-time availability management system.",
       sq: "Platformë moderne për qiramarrje makinash me rezervim online, katalog flotash dhe sistem menaxhimi të disponueshmërisë.",
@@ -25,7 +26,8 @@ export const PROJECTS = [
     cat: "Construction",
     catKey: "Web App",
     url: "https://www.lunagrup.al",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
+    image: "/projects/desktop/luna-desktop.png",
+    imageMobile: "/projects/mobile/luna-mobile.jpeg",
     desc: {
       en: "Professional construction company website with project portfolio, services showcase, and client inquiry system.",
       sq: "Faqe profesionale për kompani ndërtimi me portofol projektesh, shërbime dhe formë kontakti për klientë të rinj.",
@@ -43,7 +45,8 @@ export const PROJECTS = [
     cat: "Wellness & Spa",
     catKey: "Web App",
     url: "https://www.senseamassage.al",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop",
+    image: "/projects/desktop/sensea-desktop.png",
+    imageMobile: "/projects/mobile/sensea-mobile.jpeg",
     desc: {
       en: "Elegant massage center website with online appointment booking, service showcase, and seamless payment integration.",
       sq: "Faqe elegante për qendër masazhi me sistem rezervimesh online, paraqitje shërbimesh dhe integrimi i pagesave.",
@@ -61,7 +64,8 @@ export const PROJECTS = [
     cat: "Online Bookstore",
     catKey: "Platform",
     url: "https://www.stacionilibrarise.al",
-    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop",
+    image: "/projects/desktop/stacioni-desktop.png",
+    imageMobile: "/projects/mobile/stacioni-mobile.jpeg",
     desc: {
       en: "Full-featured online bookstore with complete catalog, advanced search, shopping cart, and integrated payment system.",
       sq: "Dyqan librash online me katalog të plotë, kërkim të avancuar, shportë blerjesh dhe sistem pagesash të integruar.",
@@ -79,7 +83,8 @@ export const PROJECTS = [
     cat: "Car Rental",
     catKey: "Web App",
     url: "https://www.hana-car-rental.al",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200&auto=format&fit=crop",
+    image: "/projects/desktop/hana-desktop.png",
+    imageMobile: "/projects/mobile/hana-mobile.jpeg",
     desc: {
       en: "Elegant car rental platform with online booking, multilingual support, and a curated fleet showcase for Albanian travelers.",
       sq: "Platformë elegante për qiramarrje makinash me rezervim online, mbështetje shumëgjuhëshe dhe shfaqje të flotës për udhëtarët shqiptarë.",
@@ -97,7 +102,8 @@ export const PROJECTS = [
     cat: "Interior Decor",
     catKey: "Web App",
     url: "https://www.shehudekor.al",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+    image: "/projects/desktop/shehu-desktop.png",
+    imageMobile: "/projects/mobile/shehu-mobile.jpeg",
     desc: {
       en: "Modern website for an interior decoration and construction company, featuring a project portfolio, services showcase, and client inquiry system.",
       sq: "Faqe moderne për kompani dekorimi dhe ndërtimi të brendshëm, me portofol projektesh, shërbime dhe sistem kontakti për klientë të rinj.",

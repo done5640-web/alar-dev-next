@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
-import { ProjectModal } from "@/components/ProjectModal";
 import RevealObserver from "@/components/RevealObserver";
 import { useLang } from "@/lib/i18n";
 import { PROJECTS } from "@/lib/data";
@@ -13,13 +12,9 @@ const CAT_LABELS: Record<Lang, Record<string, string>> = {
   sq: { All: "Të Gjitha", "Web App": "Web Apps", Platform: "Platforma" },
 };
 
-type Project = (typeof PROJECTS)[number];
-
 export default function ProjectsPage() {
   const { lang } = useLang();
   const [filter, setFilter] = useState("All");
-  const [modal, setModal] = useState<Project | null>(null);
-  const openModal = (p: Project) => setModal(p);
 
   const visible = filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.catKey === filter);
 
@@ -27,7 +22,6 @@ export default function ProjectsPage() {
     <>
       <RevealObserver />
 
-      {/* Page Hero */}
       <div className="page-hero">
         <div className="page-hero-dots" />
         <div className="page-hero-glow" style={{ "--hero-glow-color": "rgba(6,182,212,0.15)" } as React.CSSProperties} />
@@ -47,7 +41,6 @@ export default function ProjectsPage() {
       </div>
 
       <div className="container" style={{ paddingBottom: 120 }}>
-        {/* Filters */}
         <div className="filters reveal">
           {CATS.map((c) => (
             <button key={c} className={`filter${filter === c ? " active" : ""}`} onClick={() => setFilter(c)}>
@@ -55,15 +48,12 @@ export default function ProjectsPage() {
             </button>
           ))}
         </div>
-
         <div className="proj-grid-3">
           {visible.map((p) => (
-            <ProjectCard key={p.id} p={p} lang={lang as Lang} onOpen={openModal} />
+            <ProjectCard key={p.id} p={p} lang={lang as Lang} />
           ))}
         </div>
       </div>
-
-      {modal && <ProjectModal project={modal} lang={lang as Lang} onClose={() => setModal(null)} />}
     </>
   );
 }

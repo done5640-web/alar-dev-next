@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useLang } from "@/lib/i18n";
 import { PROJECTS } from "@/lib/data";
 import type { Lang } from "@/lib/data";
@@ -8,10 +8,11 @@ type Project = (typeof PROJECTS)[number];
 
 const FEATURED_IDS = [5, 3, 4, 2, 1, 6];
 
-export default function ProjectCarousel({ onOpen }: { onOpen: (p: Project) => void }) {
+export default function ProjectCarousel() {
   const { lang } = useLang();
   const [active, setActive] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const touchStartX = useRef(0);
 
   const items = FEATURED_IDS.map((id) => PROJECTS.find((p) => p.id === id)!).filter(Boolean);
   const total = items.length;
@@ -50,8 +51,20 @@ export default function ProjectCarousel({ onOpen }: { onOpen: (p: Project) => vo
     };
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) go(diff > 0 ? 1 : -1);
+  };
+
   return (
-    <div className="fan-carousel">
+    <div
+      className="fan-carousel"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Left arrow — positioned on the side */}
       <button className="fan-arrow fan-arrow-left" onClick={() => go(-1)} aria-label="Previous">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18 L9 12 L15 6"/></svg>
@@ -81,16 +94,11 @@ export default function ProjectCarousel({ onOpen }: { onOpen: (p: Project) => vo
                 <div className="fan-tech">
                   {p.tech.slice(0, 3).map((t) => <span key={t} className="fan-tag">{t}</span>)}
                 </div>
-                {isCenter && (
+                {isCenter && p.url && (
                   <div className="fan-actions">
-                    <button className="fan-more" onClick={() => onOpen(p)}>
-                      {lang === "en" ? "View details" : "Shiko detajet"} →
-                    </button>
-                    {p.url && (
-                      <a href={p.url} target="_blank" rel="noopener noreferrer" className="fan-live">
-                        {lang === "en" ? "Visit site ↗" : "Vizito faqen ↗"}
-                      </a>
-                    )}
+                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="fan-visit">
+                      {lang === "en" ? "Visit site ↗" : "Vizito faqen ↗"}
+                    </a>
                   </div>
                 )}
               </div>

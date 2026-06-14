@@ -1,16 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 import StatsCounter from "@/components/StatsCounter";
 import Ticker from "@/components/Ticker";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import RevealObserver from "@/components/RevealObserver";
-import { ProjectModal } from "@/components/ProjectModal";
 import { useLang } from "@/lib/i18n";
-import { PROJECTS } from "@/lib/data";
 import type { Lang } from "@/lib/data";
-
-type Project = (typeof PROJECTS)[number];
 
 const WHY = [
   {
@@ -86,8 +81,6 @@ const PRICING = [
 
 export default function HomePage() {
   const { lang } = useLang();
-  const [modal, setModal] = useState<Project | null>(null);
-  const openModal = (p: Project) => setModal(p);
 
   return (
     <>
@@ -150,7 +143,7 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <ProjectCarousel onOpen={openModal} />
+        <ProjectCarousel />
         <div className="container">
           <div className="center" style={{ marginTop: 48 }}>
             <Link href="/projects" className="btn btn-ghost">
@@ -205,32 +198,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US — editorial layout */}
+      {/* WHY CHOOSE US — editorial paragraph layout */}
       <section className="block why-section">
         <div className="container">
           <div className="why-editorial reveal">
-            {/* Left: reasons */}
             <div className="why-editorial-left">
               <div className="section-label">{lang === "en" ? "WHY US" : "PSE NE"}</div>
               <h2 className="section-head" style={{ textAlign: "left", marginTop: 16 }}>
                 {lang === "en" ? <>Why choose <span className="gradient-text">ALAR DEV</span></> : <>Pse zgjidhni <span className="gradient-text">ALAR DEV</span></>}
               </h2>
-              <div className="why-list">
-                {WHY.map((w, i) => (
-                  <div key={i} className="why-row">
-                    <div className="why-row-num">0{i + 1}</div>
-                    <div>
-                      <h4 className="why-row-title">{w.t[lang as Lang]}</h4>
-                      <p className="why-row-desc">{w.d[lang as Lang]}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="why-para-block">
+                {lang === "en" ? (
+                  <>
+                    <p>We've spent years building digital products for Albanian businesses — and we know what actually works. We move fast, we communicate clearly, and we treat every project like our own.</p>
+                    <p>Most sites launch in 7–14 days. You own everything: the code, the domain, the hosting. No lock-in, no hidden fees, no surprises. And when we're done, we don't disappear — we stay as your long-term tech partner.</p>
+                    <p>50+ projects delivered. Our clients come back because the work speaks for itself.</p>
+                  </>
+                ) : (
+                  <>
+                    <p>Kemi kaluar vite duke ndërtuar produkte digjitale për biznese shqiptare — dhe e dimë çfarë funksionon. Lëvizim shpejt, komunikojmë qartë dhe trajtojmë çdo projekt si të ytin.</p>
+                    <p>Shumica e faqeve lansohen në 7–14 ditë. Ju zotëroni gjithçka: kodin, domenin, hostingun. Pa kufizime, pa tarifa të fshehura, pa surpriza. Dhe kur mbarojmë, nuk zhdukem — mbetemi partneri juaj afatgjatë.</p>
+                    <p>50+ projekte të dorëzuara. Klientët kthehen sepse puna flet vetë.</p>
+                  </>
+                )}
               </div>
               <Link href="/contact" className="btn btn-primary" style={{ marginTop: 40, alignSelf: "flex-start" }}>
                 {lang === "en" ? "Start your project →" : "Fillo projektin →"}
               </Link>
             </div>
-            {/* Right: photo */}
             <div className="why-editorial-right">
               <div className="why-photo-wrap">
                 <img
@@ -265,7 +260,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {modal && <ProjectModal project={modal} lang={lang as Lang} onClose={() => setModal(null)} />}
     </>
   );
 }
