@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact ALAR DEV | Get a Free Quote — Web & App Development Albania",
+  title: "Contact ALAR DEV | Get a Free Quote â€” Web & App Development Albania",
   description:
-    "Start your project with ALAR DEV today. Get a free quote for your website, mobile app or custom software. Based in Tirana, Albania — serving clients worldwide. Na kontaktoni — merrni ofertë falas për faqen tuaj web ose aplikacionin tuaj.",
+    "Start your project with ALAR DEV today. Get a free quote for your website, mobile app or custom software. Based in Tirana, Albania â€” serving clients worldwide. Na kontaktoni â€” merrni ofertÃ« falas pÃ«r faqen tuaj web ose aplikacionin tuaj.",
   keywords: [
     // Albanian contact
     "kontaktoni alar dev", "oferte falas website shqiperi", "oferte falas aplikacion mobile",
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     languages: { "en": "https://alardev.al/contact", "sq": "https://alardev.al/contact", "x-default": "https://alardev.al/contact" },
   },
   openGraph: {
-    title: "Contact ALAR DEV | Free Quote — Web & App Development Albania",
+    title: "Contact ALAR DEV | Free Quote â€” Web & App Development Albania",
     description: "Get a free quote for your website, app or custom software. No pitch decks. Just a real conversation. Based in Albania, serving worldwide.",
     url: "https://alardev.al/contact",
     siteName: "ALAR DEV",
     type: "website",
-    images: [{ url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", width: 1200, height: 630, alt: "Contact ALAR DEV" }],
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "Contact ALAR DEV" }],
   },
   twitter: { card: "summary_large_image", title: "Contact ALAR DEV | Free Quote", description: "Get a free quote for your website, app or custom software. Albania's top software studio." },
   robots: { index: true, follow: true },
@@ -46,3 +46,4 @@ export const metadata: Metadata = {
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
+

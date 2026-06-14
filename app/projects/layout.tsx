@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Web & App Projects — ALAR DEV Albania",
+  title: "Portfolio | Web & App Projects â€” ALAR DEV Albania",
   description:
-    "Explore 50+ completed projects by ALAR DEV — websites, mobile apps and custom software built for Albanian and international businesses. Real results, on time and on budget. Portofoli ynë — projektet e realizuara nga ALAR DEV Shqipëri.",
+    "Explore 50+ completed projects by ALAR DEV â€” websites, mobile apps and custom software built for Albanian and international businesses. Real results, on time and on budget. Portofoli ynÃ« â€” projektet e realizuara nga ALAR DEV ShqipÃ«ri.",
   keywords: [
     // Albanian portfolio
     "portofoli alar dev", "projektet tona shqiperi", "punet tona shqiperi",
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     languages: { "en": "https://alardev.al/projects", "sq": "https://alardev.al/projects", "x-default": "https://alardev.al/projects" },
   },
   openGraph: {
-    title: "Portfolio | 50+ Projects — ALAR DEV Albania",
+    title: "Portfolio | 50+ Projects â€” ALAR DEV Albania",
     description: "50+ websites, apps and software products built for Albanian and international businesses. Real results, on time and on budget.",
     url: "https://alardev.al/projects",
     siteName: "ALAR DEV",
     type: "website",
-    images: [{ url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", width: 1200, height: 630, alt: "ALAR DEV Portfolio" }],
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Portfolio" }],
   },
   twitter: { card: "summary_large_image", title: "Portfolio | ALAR DEV Albania", description: "50+ completed projects. Websites, apps & custom software for Albanian businesses." },
   robots: { index: true, follow: true },
@@ -46,3 +46,4 @@ export const metadata: Metadata = {
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
+

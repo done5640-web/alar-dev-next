@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
 import Nav from "@/components/Nav";
@@ -7,11 +7,11 @@ import ClientEffects from "@/components/ClientEffects";
 
 export const metadata: Metadata = {
   title: {
-    default: "ALAR DEV — Software Studio | Web Development & Apps Albania",
+    default: "ALAR DEV â€” Software Studio | Web Development & Apps Albania",
     template: "%s | ALAR DEV",
   },
   description:
-    "ALAR DEV — Albania's leading software studio. We build websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership. Krijim website, zhvillim aplikacione, kompani software Shqipëri.",
+    "ALAR DEV â€” Albania's leading software studio. We build websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership. Krijim website, zhvillim aplikacione, kompani software ShqipÃ«ri.",
   metadataBase: new URL("https://alardev.al"),
   keywords: "web development albania, software company albania, krijim website, krijim faqe web, kompani software shqiperi, dizajn website shqiperi, zhvillim aplikacione mobile, mobile app development albania, e-commerce albania, custom software albania, alar dev",
   authors: [{ name: "ALAR DEV", url: "https://alardev.al" }],
@@ -61,8 +61,8 @@ const jsonLd = {
       name: "ALAR DEV",
       description: "Professional software studio in Tirana, Albania. Web development, mobile apps, e-commerce and custom software.",
       url: "https://alardev.al",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop",
-      priceRange: "€€",
+      image: "https://alardev.al/og-image.png",
+      priceRange: "â‚¬â‚¬",
       address: { "@type": "PostalAddress", addressLocality: "Tirana", addressCountry: "AL" },
       geo: { "@type": "GeoCoordinates", latitude: 41.3275, longitude: 19.8187 },
       openingHoursSpecification: {
@@ -97,7 +97,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://alardev.al/#service",
-      name: "ALAR DEV — Software Studio",
+      name: "ALAR DEV â€” Software Studio",
       provider: { "@id": "https://alardev.al/#organization" },
       serviceType: ["Web Development", "Mobile App Development", "E-commerce Development", "Custom Software Development", "UI/UX Design"],
       areaServed: ["Albania", "Kosovo", "Europe", "Worldwide"],
@@ -137,3 +137,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

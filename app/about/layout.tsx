@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About ALAR DEV | Albanian Software Studio — Who We Are",
+  title: "About ALAR DEV | Albanian Software Studio â€” Who We Are",
   description:
-    "ALAR DEV is a software studio based in Albania, building digital products for businesses across Tirana, Kosovo and beyond. 50+ projects delivered. We build fast, you own everything. Rreth ALAR DEV — studio software nga Shqipëria.",
+    "ALAR DEV is a software studio based in Albania, building digital products for businesses across Tirana, Kosovo and beyond. 50+ projects delivered. We build fast, you own everything. Rreth ALAR DEV â€” studio software nga ShqipÃ«ria.",
   keywords: [
     // Albanian
     "rreth alar dev", "studio software shqiperi", "kompani software shqiperi",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://alardev.al/about",
     siteName: "ALAR DEV",
     type: "website",
-    images: [{ url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", width: 1200, height: 630, alt: "ALAR DEV Team" }],
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Team" }],
   },
   twitter: { card: "summary_large_image", title: "About ALAR DEV | Albanian Software Studio", description: "A software studio from Albania. 50+ projects delivered." },
   robots: { index: true, follow: true },
@@ -44,3 +44,4 @@ export const metadata: Metadata = {
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
+
