@@ -988,7 +988,7 @@ nav.top.scrolled {
 .btn-primary {
   background: rgba(168,85,247,0.12) !important;
   border: 1px solid rgba(168,85,247,0.32) !important;
-  color: #fff !important;
+  color: #a855f7 !important;
   backdrop-filter: blur(8px) !important;
 }
 .btn-primary:hover {
@@ -1017,8 +1017,9 @@ nav.top.scrolled {
 /* Carousel visit button */
 .fan-visit {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(168,85,247,0.12);
+  border: 1px solid rgba(168,85,247,0.32);
+  color: #a855f7 !important;
   color: #fff;
   font-size: 14px; font-weight: 600;
   padding: 10px 22px; border-radius: 8px;
@@ -1027,8 +1028,9 @@ nav.top.scrolled {
   text-decoration: none;
 }
 .fan-visit:hover {
-  background: rgba(255,255,255,0.16);
-  border-color: rgba(255,255,255,0.32);
+  background: rgba(168,85,247,0.2);
+  border-color: rgba(168,85,247,0.5);
+  color: #c084fc !important;
   transform: translateY(-1px);
 }
 
@@ -1128,10 +1130,11 @@ nav.top.scrolled {
 @media (max-width: 767px) {
   .desktop-only { display: none !important; }
   .nav-cta { display: none !important; }
-  /* Show pills on mobile — spread across hero */
-  .fp1 { display: block !important; top: 22%; bottom: auto; right: 4%; left: auto; font-size: 10px; padding: 6px 12px; }
-  .fp3 { display: block !important; top: 42%; bottom: auto; left: 4%; right: auto; font-size: 10px; padding: 6px 12px; }
-  .fp2, .fp4 { display: none !important; }
+  /* Show all pills on mobile — framing the headline */
+  .fp1 { display: block !important; top: 18%; bottom: auto; left: 4%; right: auto; font-size: 10px; padding: 5px 11px; }
+  .fp2 { display: block !important; top: 18%; bottom: auto; right: 4%; left: auto; font-size: 10px; padding: 5px 11px; }
+  .fp3 { display: block !important; top: 58%; bottom: auto; left: 4%; right: auto; font-size: 10px; padding: 5px 11px; }
+  .fp4 { display: block !important; top: 58%; bottom: auto; right: 4%; left: auto; font-size: 10px; padding: 5px 11px; }
   .hero-ctas { flex-direction: column; align-items: stretch; }
   .hero-ctas .btn { text-align: center; justify-content: center; }
   /* Carousel on mobile — tighter arrows */
