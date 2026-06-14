@@ -6,7 +6,7 @@ const stats = [
   { target: 50, suffix: "+", label: { en: "Projects Delivered", sq: "Projekte të Realizuara" } },
   { target: 30, suffix: "+", label: { en: "Happy Clients", sq: "Klientë të Kënaqur" } },
   { target: 100, suffix: "%", label: { en: "Quality Guaranteed", sq: "Cilësi e Garantuar" } },
-  { target: 3, suffix: "", label: { en: "Years of Experience", sq: "Vite Eksperience" } },
+  { target: 7, suffix: "", label: { en: "Years of Experience", sq: "Vite Eksperience" } },
 ];
 
 export default function StatsCounter() {
