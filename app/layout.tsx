@@ -7,11 +7,11 @@ import ClientEffects from "@/components/ClientEffects";
 
 export const metadata: Metadata = {
   title: {
-    default: “ALAR DEV — Software Studio | Web Development & Apps Albania”,
-    template: “%s | ALAR DEV”,
+    default: "ALAR DEV — Software Studio | Web Development & Apps Albania",
+    template: "%s | ALAR DEV",
   },
   description:
-    “ALAR DEV — Albania's leading software studio. We build websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership. Krijim website, zhvillim aplikacione, kompani software Shqipëri.”,
+    "ALAR DEV — Albania's leading software studio. We build websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership. Krijim website, zhvillim aplikacione, kompani software Shqipëri.",
   metadataBase: new URL("https://alardev.al"),
   keywords: "web development albania, software company albania, krijim website, krijim faqe web, kompani software shqiperi, dizajn website shqiperi, zhvillim aplikacione mobile, mobile app development albania, e-commerce albania, custom software albania, alar dev",
   authors: [{ name: "ALAR DEV", url: "https://alardev.al" }],
@@ -97,7 +97,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://alardev.al/#service",
-      name: “ALAR DEV — Software Studio”,
+      name: "ALAR DEV — Software Studio",
       provider: { "@id": "https://alardev.al/#organization" },
       serviceType: ["Web Development", "Mobile App Development", "E-commerce Development", "Custom Software Development", "UI/UX Design"],
       areaServed: ["Albania", "Kosovo", "Europe", "Worldwide"],
