@@ -744,7 +744,7 @@ input.f.err, select.f.err, textarea.f.err { border-color: #ef4444; }
   .hamburger { display: flex; }
   .nav-cta { display: none; }
   #hero { height: auto; min-height: 0; padding-top: 110px; padding-bottom: 64px; }
-  .hero-headline { font-size: 36px; line-height: 1.1; margin-top: 32px; }
+  .hero-headline { font-size: 36px; line-height: 1.1; margin-top: 56px; }
   .hero-sub { font-size: 17px; }
   .hero-ctas { margin-top: 64px; }
   .section-head, .page-head h1 { font-size: 28px; }
