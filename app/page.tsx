@@ -2,9 +2,9 @@
 import HomePageClient from "@/components/HomePageClient";
 
 export const metadata: Metadata = {
-  title: "Krijim Website & Faqe Interneti | Web Design Albania â€” ALAR DEV",
+  title: “Krijim Website & Faqe Interneti | Web Design Albania — ALAR DEV”,
   description:
-    "Krijim website dhe faqe interneti profesionale nÃ« ShqipÃ«ri. Web design, dyqan online, aplikacione mobile nga â‚¬150. Professional website creation & web design in Albania â€” e-commerce, mobile apps, custom software. Tirana. Na kontaktoni!",
+    “Krijim website dhe faqe interneti profesionale në Shqipëri. Web design, dyqan online, aplikacione mobile nga €150. Professional website creation & web design in Albania — e-commerce, mobile apps, custom software. Tirana. Na kontaktoni!”,
   keywords: [
     // Albanian primary
     "krijim website", "krijim faqe web", "krijim faqe interneti", "dizajn website shqiperi",
@@ -77,26 +77,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Krijim Website & Web Design Albania | ALAR DEV TiranÃ«",
+    title: “Krijim Website & Web Design Albania | ALAR DEV”,
     description:
-      "Studio profesionale pÃ«r krijim website dhe web design nÃ« ShqipÃ«ri. Faqe interneti nga â‚¬150, aplikacione mobile, e-commerce. DorÃ«zim i shpejtÃ«, pronÃ«si e plotÃ«.",
-    url: "https://alardev.al",
-    siteName: "ALAR DEV",
-    locale: "en_US",
-    type: "website",
+      “Studio profesionale për krijim website dhe web design në Shqipëri. Faqe interneti nga €150, aplikacione mobile, e-commerce. Dorëzim i shpejtë, pronësi e plotë.”,
+    url: “https://alardev.al”,
+    siteName: “ALAR DEV”,
+    locale: “en_US”,
+    type: “website”,
     images: [
       {
-        url: "https://alardev.al/og-image.png",
+        url: “https://alardev.al/og-image.png”,
         width: 1200,
         height: 630,
-        alt: "ALAR DEV â€” Software Studio Albania",
+        alt: “ALAR DEV — Software Studio Albania”,
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "ALAR DEV â€” Software Studio | Web Development Albania",
-    description: "Albania's leading software studio. Websites, mobile apps & custom software from â‚¬150.",
+    card: “summary_large_image”,
+    title: “ALAR DEV — Software Studio | Web Development Albania”,
+    description: “Albania's leading software studio. Websites, mobile apps & custom software from €150.”,
     images: ["https://alardev.al/og-image.png"],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },

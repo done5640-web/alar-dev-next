@@ -7,11 +7,11 @@ import ClientEffects from "@/components/ClientEffects";
 
 export const metadata: Metadata = {
   title: {
-    default: "ALAR DEV â€” Software Studio | Web Development & Apps Albania",
-    template: "%s | ALAR DEV",
+    default: “ALAR DEV — Software Studio | Web Development & Apps Albania”,
+    template: “%s | ALAR DEV”,
   },
   description:
-    "ALAR DEV â€” Albania's leading software studio. We build websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership. Krijim website, zhvillim aplikacione, kompani software ShqipÃ«ri.",
+    “ALAR DEV — Albania's leading software studio. We build websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership. Krijim website, zhvillim aplikacione, kompani software Shqipëri.”,
   metadataBase: new URL("https://alardev.al"),
   keywords: "web development albania, software company albania, krijim website, krijim faqe web, kompani software shqiperi, dizajn website shqiperi, zhvillim aplikacione mobile, mobile app development albania, e-commerce albania, custom software albania, alar dev",
   authors: [{ name: "ALAR DEV", url: "https://alardev.al" }],
@@ -62,7 +62,7 @@ const jsonLd = {
       description: "Professional software studio in Tirana, Albania. Web development, mobile apps, e-commerce and custom software.",
       url: "https://alardev.al",
       image: "https://alardev.al/og-image.png",
-      priceRange: "â‚¬â‚¬",
+      priceRange: "€€",
       address: { "@type": "PostalAddress", addressLocality: "Tirana", addressCountry: "AL" },
       geo: { "@type": "GeoCoordinates", latitude: 41.3275, longitude: 19.8187 },
       openingHoursSpecification: {
@@ -97,7 +97,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://alardev.al/#service",
-      name: "ALAR DEV â€” Software Studio",
+      name: “ALAR DEV — Software Studio”,
       provider: { "@id": "https://alardev.al/#organization" },
       serviceType: ["Web Development", "Mobile App Development", "E-commerce Development", "Custom Software Development", "UI/UX Design"],
       areaServed: ["Albania", "Kosovo", "Europe", "Worldwide"],
