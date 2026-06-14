@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomePageClient from "@/components/HomePageClient";
 
 export const metadata: Metadata = {
-  title: "Krijim Website & Faqe Interneti | Web Design Albania — ALAR DEV Tiranë",
+  title: "Krijim Website & Faqe Interneti | Web Design Albania — ALAR DEV",
   description:
     "Krijim website dhe faqe interneti profesionale në Shqipëri. Web design, dyqan online, aplikacione mobile nga €150. Professional website creation & web design in Albania — e-commerce, mobile apps, custom software. Tirana. Na kontaktoni!",
   keywords: [
