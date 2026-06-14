@@ -10,6 +10,7 @@ const links = [
   { href: "/about", label: { en: "About", sq: "Rreth Nesh" } },
   { href: "/services", label: { en: "Services", sq: "Shërbimet" } },
   { href: "/projects", label: { en: "Portfolio", sq: "Portofoli" } },
+  { href: "/blog", label: { en: "Blog", sq: "Blog" } },
   { href: "/contact", label: { en: "Contact", sq: "Kontakt" } },
 ];
 
