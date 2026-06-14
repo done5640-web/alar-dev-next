@@ -116,6 +116,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="alternate" hrefLang="en" href="https://alardev.al" />
         <link rel="alternate" hrefLang="sq" href="https://alardev.al" />
         <link rel="alternate" hrefLang="x-default" href="https://alardev.al" />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEMJE66YC8" />
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NEMJE66YC8');` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
