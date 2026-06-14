@@ -233,10 +233,6 @@ export default function HomePage() {
                   alt="ALAR DEV workspace"
                   className="why-photo"
                 />
-                <div className="why-photo-badge">
-                  <div className="why-badge-num">50+</div>
-                  <div className="why-badge-lbl">{lang === "en" ? "Projects delivered" : "Projekte të realizuara"}</div>
-                </div>
               </div>
             </div>
           </div>
