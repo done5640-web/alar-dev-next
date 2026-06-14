@@ -1,261 +1,107 @@
-"use client";
-import Link from "next/link";
-import StatsCounter from "@/components/StatsCounter";
-import Ticker from "@/components/Ticker";
-import ProjectCarousel from "@/components/ProjectCarousel";
-import RevealObserver from "@/components/RevealObserver";
-import { useLang } from "@/lib/i18n";
-import type { Lang } from "@/lib/data";
+import type { Metadata } from "next";
+import HomePageClient from "@/components/HomePageClient";
 
-const WHY = [
-  {
-    icon: "⚡",
-    t: { en: "Fast delivery", sq: "Dorëzim i shpejtë" },
-    d: { en: "We move quickly without cutting corners. Most projects launch in 2–4 weeks.", sq: "Lëvizim shpejt pa anashkaluar cilësinë. Shumica e projekteve lansohen në 2–4 javë." },
+export const metadata: Metadata = {
+  title: "ALAR DEV — Software Studio | Web Development & Mobile Apps Albania",
+  description:
+    "ALAR DEV is Albania's #1 software studio. We build professional websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership, transparent pricing from €150. Krijim website, zhvillim aplikacione, kompani software Shqipëri.",
+  keywords: [
+    // Albanian primary
+    "krijim website", "krijim faqe web", "krijim faqe interneti", "dizajn website shqiperi",
+    "dizajn faqe web", "dizajn faqe interneti", "kompani software shqiperi", "kompani software tirane",
+    "studio software shqiperi", "studio digjitale shqiperi", "zhvillim faqe web", "zhvillim aplikacione",
+    "zhvillim aplikacione mobile", "zhvillim software", "programim web", "programim faqe interneti",
+    "programues web tirane", "web developer shqiperi", "web developer tirane", "agjensi digjitale shqiperi",
+    "agjensi web shqiperi", "krijim dyqan online", "dyqan online shqiperi", "e-commerce shqiperi",
+    "faqe shitje online", "krijim aplikacion mobile", "aplikacione android shqiperi", "aplikacione ios shqiperi",
+    "sistem online", "sistem rezervimi online", "panel administrimi", "dashboard admin shqiperi",
+    "CRM shqiperi", "SaaS shqiperi", "platforma SaaS shqiperi", "zhvillim platforma",
+    "faqe interneti profesionale", "faqe interneti biznesi", "website me cmim te mire",
+    "website lire shqiperi", "mirëmbajtje faqe web", "optimizim SEO shqiperi", "SEO shqiperi",
+    "optimizim motoresh kerkimi shqiperi", "faqe interneti tirane", "website tirane",
+    "website durres", "website shkoder", "website vlore", "website fier", "website elbasan",
+    "website korce", "website berat", "website lushnje", "website kavaje", "website pogradec",
+    "krijim website kosove", "web developer kosove", "studio software kosove",
+    "website prishtine", "kompani software kosove", "agjensi web kosove",
+    "website gjakove", "website prizren", "website mitrovice",
+    "transformim digjital shqiperi", "dixhitalizim biznesi shqiperi", "platforma digjitale",
+    "aplikacion biznes shqiperi", "faqe restoranti shqiperi", "faqe hoteli shqiperi",
+    "faqe pasuri te paluajtshme shqiperi", "faqe mjekesore shqiperi", "faqe bukurie shqiperi",
+    "faqe makinash shqiperi", "faqe ndertimi shqiperi", "sisteme informacioni",
+    "aplikacione web shqiperi", "platforma cloud", "sisteme menaxhimi", "CMS shqiperi",
+    "menaxhim permbajtje shqiperi", "branding dixhital shqiperi", "identitet vizual shqiperi",
+    "paketa web shqiperi", "oferta web shqiperi", "cmime website shqiperi",
+    "sa kushton website shqiperi", "cmim krijim faqe web", "website 150 euro",
+    "website startup shqiperi", "website biznes i ri", "prezantim online", "faqe prezantuese shqiperi",
+    "landing page shqiperi", "alar dev", "alar development",
+    // English Albania/Kosovo
+    "web development albania", "website creation albania", "software company albania",
+    "software development albania", "web design albania", "mobile app development albania",
+    "custom software albania", "software studio albania", "web developer albania",
+    "e-commerce development albania", "website design tirana", "web development tirana",
+    "software company tirana", "tech company albania", "IT company albania",
+    "digital agency albania", "affordable web development albania", "professional website albania",
+    "business website albania", "landing page albania", "next.js developer albania",
+    "react developer albania", "flutter developer albania", "full stack developer albania",
+    "app development albania", "web application albania", "startup website albania",
+    "small business website albania", "restaurant website albania", "hotel website albania",
+    "real estate website albania", "online store albania", "booking system albania",
+    "admin dashboard albania", "content management albania", "software development tirana",
+    "web developer tirana", "albanian software company", "albanian web developers",
+    "albanian tech company", "website for albanian business", "kosovo web developer",
+    "kosovo software company", "balkans software company", "southeastern europe web development",
+    "software company kosova", "web development kosova",
+    // International English
+    "affordable web development", "professional website design", "custom web development",
+    "business website creation", "e-commerce website development", "mobile app development company",
+    "react developer", "next.js developer", "flutter developer", "web application development",
+    "SaaS development", "CRM development", "software development company", "software studio",
+    "digital agency", "website for small business", "professional web design",
+    "custom software development", "full stack development", "web developer for hire",
+    "hire web developer", "website developer", "portfolio website", "business card website",
+    "startup website development", "MVP development", "web app development",
+    "progressive web app", "responsive web design", "SEO friendly website",
+    "website maintenance", "website redesign", "ecommerce platform", "online shop development",
+    "payment integration", "stripe integration", "booking system", "appointment scheduling",
+    "customer management", "inventory management", "order management", "admin panel",
+    "dashboard development", "API development", "REST API", "database design",
+    "cloud deployment", "Vercel deployment", "docker deployment",
+    "software consulting", "IT consulting", "digital transformation",
+  ].join(", "),
+  alternates: {
+    canonical: "https://alar.dev",
+    languages: {
+      "en": "https://alar.dev",
+      "sq": "https://alar.dev",
+      "x-default": "https://alar.dev",
+    },
   },
-  {
-    icon: "◎",
-    t: { en: "Local & reliable", sq: "Lokal & i besueshëm" },
-    d: { en: "Based in Albania, working with Albanian businesses every day. We understand your market.", sq: "Me bazë në Shqipëri, punojmë me biznese shqiptare çdo ditë. E njohim tregun tuaj." },
+  openGraph: {
+    title: "ALAR DEV — Software Studio | Web Development Albania",
+    description:
+      "Albania's leading software studio. Professional websites, mobile apps & custom software. From €150. Fast delivery, full ownership. Serving Tirana, Kosovo and worldwide.",
+    url: "https://alar.dev",
+    siteName: "ALAR DEV",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "ALAR DEV — Software Studio Albania",
+      },
+    ],
   },
-  {
-    icon: "▣",
-    t: { en: "Full ownership", sq: "Pronësi e plotë" },
-    d: { en: "You own everything — code, domain, hosting. No lock-in, no surprises.", sq: "Ju zotëroni gjithçka — kodin, domenin, hostingun. Pa kufizime, pa surpriza." },
+  twitter: {
+    card: "summary_large_image",
+    title: "ALAR DEV — Software Studio | Web Development Albania",
+    description: "Albania's leading software studio. Websites, mobile apps & custom software from €150.",
+    images: ["https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop"],
   },
-  {
-    icon: "◈",
-    t: { en: "Real results", sq: "Rezultate reale" },
-    d: { en: "50+ completed projects. Our clients come back because the work speaks for itself.", sq: "50+ projekte të realizuara. Klientët kthehen sepse puna flet vetë." },
-  },
-  {
-    icon: "◐",
-    t: { en: "Transparent pricing", sq: "Çmime transparente" },
-    d: { en: "No hidden fees. You know what you pay from day one.", sq: "Pa tarifa të fshehura. Dini çfarë paguani nga dita e parë." },
-  },
-  {
-    icon: "◑",
-    t: { en: "After-launch support", sq: "Mbështetje pas lansimit" },
-    d: { en: "We stick around after go-live. Updates, fixes, and growth — we're your long-term partner.", sq: "Mbetemi pas lansimit. Përditësime, rregullime dhe rritje — jemi partneri juaj afatgjatë." },
-  },
-];
-
-const PRICING = [
-  {
-    key: "landing",
-    price: "€150",
-    t: { en: "Landing Page", sq: "Faqe Prezantuese" },
-    d: { en: "Perfect for new businesses or product launches. Fast, beautiful, and conversion-focused.", sq: "Ideal për biznese të reja ose lansime produkti. E shpejtë, e bukur dhe e fokusuar në konversion." },
-    incl: { en: ["1-page responsive design", "Contact form", "SEO basics", "Delivered in 7 days"], sq: ["Dizajn 1-faqësh responsive", "Formë kontakti", "SEO bazë", "Dorëzim në 7 ditë"] },
-    cta: false,
-    hot: false,
-  },
-  {
-    key: "admin",
-    price: "€250",
-    t: { en: "Business + Admin", sq: "Biznes + Admin" },
-    d: { en: "A full website with a dashboard to manage your content, listings, or bookings yourself.", sq: "Faqe e plotë me panel administrimi për të menaxhuar vetë përmbajtjen, listimet ose rezervimet." },
-    incl: { en: ["Multi-page site", "Admin dashboard", "Content management", "SEO optimized", "Mobile ready"], sq: ["Faqe shumë-faqësh", "Panel administrimi", "Menaxhim përmbajtjeje", "SEO e optimizuar", "Gati për mobile"] },
-    cta: false,
-    hot: true,
-  },
-  {
-    key: "ecom",
-    price: "€500",
-    t: { en: "E-commerce / CRM", sq: "E-commerce / CRM" },
-    d: { en: "Full online store or customer management system with payments, orders, and automation.", sq: "Dyqan online i plotë ose sistem menaxhimi klientësh me pagesa, porosi dhe automatizim." },
-    incl: { en: ["Product catalog", "Payment integration", "Order management", "Customer accounts", "Analytics"], sq: ["Katalog produktesh", "Integrim pagesash", "Menaxhim porosish", "Llogari klientësh", "Analitikë"] },
-    cta: false,
-    hot: false,
-  },
-  {
-    key: "custom",
-    price: null,
-    t: { en: "Custom Build", sq: "Ndërtim i Personalizuar" },
-    d: { en: "Complex platform, SaaS, mobile app, or anything that doesn't fit a template. Let's talk.", sq: "Platformë komplekse, SaaS, aplikacion mobile ose çdo gjë që nuk përshtatet në një shabllon. Le të flasim." },
-    incl: { en: ["Requirements workshop", "Custom architecture", "Dedicated team", "Long-term support"], sq: ["Workshop kërkesash", "Arkitekturë e personalizuar", "Ekip i dedikuar", "Mbështetje afatgjatë"] },
-    cta: true,
-    hot: false,
-  },
-];
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+};
 
 export default function HomePage() {
-  const { lang } = useLang();
-
-  return (
-    <>
-      <RevealObserver />
-
-      {/* HERO */}
-      <section id="hero">
-        <div className="hero-glow" />
-        <div className="float-pill fp1">React · Next.js</div>
-        <div className="float-pill fp2">Flutter · Dart</div>
-        <div className="float-pill fp3">Node.js · Docker</div>
-        <div className="float-pill fp4">PostgreSQL</div>
-        <div className="hero-inner">
-          <div className="section-label">✦ ALAR DEV · SOFTWARE STUDIO</div>
-          <h1 className="hero-headline">
-            {lang === "en" ? (
-              <>Software solutions<br />for your <span className="gradient-text">success.</span></>
-            ) : (
-              <>Zgjidhje software<br />për <span className="gradient-text">suksesin tuaj.</span></>
-            )}
-          </h1>
-          <p className="hero-sub">
-            {lang === "en"
-              ? "Creating web and mobile applications that turn startups and businesses into industry leaders."
-              : "Krijojmë aplikacione web dhe mobile që kthejnë startup-et dhe bizneset në liderë të industrisë."}
-          </p>
-          <div className="hero-ctas">
-            <Link href="/contact" className="btn btn-primary btn-lg">
-              {lang === "en" ? "Start Your Project →" : "Fillo Projektin →"}
-            </Link>
-            <Link href="/projects" className="btn btn-ghost btn-lg">
-              {lang === "en" ? "See Our Work" : "Shiko Punën Tonë"}
-            </Link>
-          </div>
-        </div>
-        <div className="scroll-ind">
-          <span>{lang === "en" ? "Scroll" : "Lëviz"}</span>
-          <div className="arrow" />
-        </div>
-      </section>
-
-      {/* STATS */}
-      <StatsCounter />
-
-      {/* TICKER */}
-      <Ticker />
-
-      {/* FEATURED PROJECTS CAROUSEL */}
-      <section id="featured-projects" className="block">
-        <div className="container">
-          <div className="center reveal">
-            <div className="section-label">{lang === "en" ? "OUR WORK" : "PUNËT TONA"}</div>
-            <h2 className="section-head">
-              {lang === "en" ? <>Selected <span className="gradient-text">Projects</span></> : <>Projekte <span className="gradient-text">të Zgjedhura</span></>}
-            </h2>
-            <p className="section-sub">
-              {lang === "en"
-                ? "Real businesses, real results."
-                : "Biznese reale, rezultate reale."}
-            </p>
-          </div>
-        </div>
-        <ProjectCarousel />
-        <div className="container">
-          <div className="center" style={{ marginTop: 48 }}>
-            <Link href="/projects" className="btn btn-ghost">
-              {lang === "en" ? "View all projects →" : "Shiko të gjitha projektet →"}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* PRICING */}
-      <section className="block" id="pricing">
-        <div className="container">
-          <div className="center reveal">
-            <div className="section-label">{lang === "en" ? "PRICING" : "ÇMIMET"}</div>
-            <h2 className="section-head">
-              {lang === "en" ? <>Simple, <span className="gradient-text">transparent</span> pricing</> : <>Çmime të <span className="gradient-text">thjeshta</span> dhe transparente</>}
-            </h2>
-            <p className="section-sub">
-              {lang === "en"
-                ? "No surprises. Pick the plan that fits your project."
-                : "Pa surpriza. Zgjidhni paketën që i përshtatet projektit tuaj."}
-            </p>
-          </div>
-          <div className="pricing-grid">
-            {PRICING.map((plan) => (
-              <div key={plan.key} className={`pricing-card reveal${plan.hot ? " pricing-hot" : ""}`}>
-                {plan.hot && <div className="pricing-badge">{lang === "en" ? "Most Popular" : "Më i Popullarizuar"}</div>}
-                <div className="pricing-top">
-                  <div className="pricing-name">{plan.t[lang as Lang]}</div>
-                  {plan.price
-                    ? <div className="pricing-price">{plan.price}</div>
-                    : <div className="pricing-price pricing-custom">{lang === "en" ? "Let's talk" : "Le të flasim"}</div>
-                  }
-                  <p className="pricing-desc">{plan.d[lang as Lang]}</p>
-                </div>
-                <ul className="pricing-incl">
-                  {plan.incl[lang as Lang].map((item) => (
-                    <li key={item}>
-                      <span className="pricing-check">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className={`btn ${plan.hot ? "btn-primary" : "btn-ghost"} pricing-btn`}>
-                  {plan.cta
-                    ? (lang === "en" ? "Get a custom quote →" : "Merr ofertë →")
-                    : (lang === "en" ? "Get started →" : "Fillo →")}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US — editorial paragraph layout */}
-      <section className="block why-section">
-        <div className="container">
-          <div className="why-editorial reveal">
-            <div className="why-editorial-left">
-              <div className="section-label">{lang === "en" ? "WHY US" : "PSE NE"}</div>
-              <h2 className="section-head" style={{ textAlign: "left", marginTop: 16 }}>
-                {lang === "en" ? <>Why choose <span className="gradient-text">ALAR DEV</span></> : <>Pse zgjidhni <span className="gradient-text">ALAR DEV</span></>}
-              </h2>
-              <div className="why-para-block">
-                {lang === "en" ? (
-                  <>
-                    <p>We've spent years building digital products for Albanian businesses — and we know what actually works. We move fast, we communicate clearly, and we treat every project like our own.</p>
-                    <p>Most sites launch in 7–14 days. You own everything: the code, the domain, the hosting. No lock-in, no hidden fees, no surprises. And when we're done, we don't disappear — we stay as your long-term tech partner.</p>
-                    <p>50+ projects delivered. Our clients come back because the work speaks for itself.</p>
-                  </>
-                ) : (
-                  <>
-                    <p>Kemi kaluar vite duke ndërtuar produkte digjitale për biznese shqiptare — dhe e dimë çfarë funksionon. Lëvizim shpejt, komunikojmë qartë dhe trajtojmë çdo projekt si të ytin.</p>
-                    <p>Shumica e faqeve lansohen në 7–14 ditë. Ju zotëroni gjithçka: kodin, domenin, hostingun. Pa kufizime, pa tarifa të fshehura, pa surpriza. Dhe kur mbarojmë, nuk zhdukem — mbetemi partneri juaj afatgjatë.</p>
-                    <p>50+ projekte të dorëzuara. Klientët kthehen sepse puna flet vetë.</p>
-                  </>
-                )}
-              </div>
-              <Link href="/contact" className="btn btn-primary" style={{ marginTop: 40, alignSelf: "flex-start" }}>
-                {lang === "en" ? "Start your project →" : "Fillo projektin →"}
-              </Link>
-            </div>
-            <div className="why-editorial-right">
-              <div className="why-photo-wrap">
-                <img
-                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop"
-                  alt="ALAR DEV workspace"
-                  className="why-photo"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA BANNER */}
-      <section id="cta-banner" className="block">
-        <div className="container cta-inner reveal">
-          <h2 className="cta-h">
-            {lang === "en" ? "Ready to build something great?" : "Gati të ndërtoni diçka të madhe?"}
-          </h2>
-          <p className="cta-sub">
-            {lang === "en"
-              ? "No pitch decks, no long contracts. Just a real conversation about your project."
-              : "Pa prezantime, pa kontrata të gjata. Vetëm një bisedë e vërtetë për projektin tuaj."}
-          </p>
-          <Link href="/contact" className="btn btn-primary btn-lg" style={{ marginTop: 40 }}>
-            {lang === "en" ? "Get in touch →" : "Na kontaktoni →"}
-          </Link>
-        </div>
-      </section>
-
-    </>
-  );
+  return <HomePageClient />;
 }
