@@ -1130,11 +1130,8 @@ nav.top.scrolled {
 @media (max-width: 767px) {
   .desktop-only { display: none !important; }
   .nav-cta { display: none !important; }
-  /* Show all pills on mobile — framing the headline */
-  .fp1 { display: block !important; top: 18%; bottom: auto; left: 4%; right: auto; font-size: 10px; padding: 5px 11px; }
-  .fp2 { display: block !important; top: 18%; bottom: auto; right: 4%; left: auto; font-size: 10px; padding: 5px 11px; }
-  .fp3 { display: block !important; top: 58%; bottom: auto; left: 4%; right: auto; font-size: 10px; padding: 5px 11px; }
-  .fp4 { display: block !important; top: 58%; bottom: auto; right: 4%; left: auto; font-size: 10px; padding: 5px 11px; }
+  /* No floating pills on mobile */
+  .fp1, .fp2, .fp3, .fp4 { display: none !important; }
   .hero-ctas { flex-direction: column; align-items: stretch; }
   .hero-ctas .btn { text-align: center; justify-content: center; }
   /* Carousel on mobile — tighter arrows */
