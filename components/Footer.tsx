@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="brand">
               <BrandLogo />
-              <span className="brand-text">alar.dev</span>
+              <span className="brand-text">ALAR DEV</span>
             </div>
             <p className="foot-tag">{lang === "en" ? "Building the digital future." : "Ndërtojmë të ardhmen digjitale."}</p>
             <div className="foot-social">
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          <span>{lang === "en" ? "© 2026 alar.dev. All rights reserved." : "© 2026 alar.dev. Të gjitha të drejtat e rezervuara."}</span>
+          <span>{lang === "en" ? "© 2026 ALAR DEV. All rights reserved." : "© 2026 ALAR DEV. Të gjitha të drejtat e rezervuara."}</span>
           <span>{lang === "en" ? "Designed & built with obsession." : "Dizajnuar dhe ndërtuar me pasion."}</span>
         </div>
       </div>

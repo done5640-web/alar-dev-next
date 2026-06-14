@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 import ClientEffects from "@/components/ClientEffects";
 
 export const metadata: Metadata = {
-  title: { default: "alar.dev — Software Studio", template: "%s | alar.dev" },
-  description: "Full-stack product teams. From architecture to deployment — we build the software your business runs on.",
+  title: { default: "ALAR DEV — Software Studio", template: "%s | ALAR DEV" },
+  description: "Creating web and mobile applications that turn startups and businesses into industry leaders.",
   metadataBase: new URL("https://alar.dev"),
   openGraph: {
-    siteName: "alar.dev",
+    siteName: "ALAR DEV",
     type: "website",
     locale: "en_US",
   },

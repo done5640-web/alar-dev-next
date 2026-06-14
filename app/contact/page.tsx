@@ -1,6 +1,6 @@
 "use client";
-import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import RevealObserver from "@/components/RevealObserver";
 import { useLang } from "@/lib/i18n";
 
 export default function ContactPage() {
@@ -8,19 +8,28 @@ export default function ContactPage() {
   const t = (en: string, sq: string) => lang === "en" ? en : sq;
 
   return (
-    <div className="pt-header">
-      <div className="container">
-        <div style={{ maxWidth: 760 }}>
-          <h1 style={{ fontSize: 64, fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.02em", color: "#fff" }}>
+    <>
+      <RevealObserver />
+
+      {/* Page Hero */}
+      <div className="page-hero">
+        <div className="page-hero-dots" />
+        <div className="page-hero-glow" style={{ "--hero-glow-color": "rgba(168,85,247,0.18)" } as React.CSSProperties} />
+        <div className="container page-hero-content reveal">
+          <div className="section-label">{lang === "en" ? "GET IN TOUCH" : "NA KONTAKTONI"}</div>
+          <h1 className="page-hero-title">
             {lang === "en"
-              ? <>Let&apos;s build something <span className="gradient-text">together</span></>
-              : <>Le të ndërtojmë diçka <span className="gradient-text">së bashku</span></>}
+              ? <>Let&apos;s build something <span className="gradient-text">together.</span></>
+              : <>Le të ndërtojmë diçka <span className="gradient-text">së bashku.</span></>}
           </h1>
-          <p style={{ fontSize: 16, color: "var(--text-muted)", marginTop: 16, maxWidth: 560 }}>
+          <p className="page-hero-sub">
             {t("Tell us about your project. We'll get back to you within 24 hours.", "Na tregoni për projektin tuaj. Do t'ju kontaktojmë brenda 24 orëve.")}
           </p>
         </div>
+      </div>
 
+    <div className="pt-header" style={{ paddingTop: 0 }}>
+      <div className="container">
         <div className="contact-grid">
           <ContactForm />
 
@@ -74,5 +83,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

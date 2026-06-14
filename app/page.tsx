@@ -1,16 +1,88 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import HeroCanvas from "@/components/HeroCanvas";
 import StatsCounter from "@/components/StatsCounter";
+import Ticker from "@/components/Ticker";
+import ProjectCarousel from "@/components/ProjectCarousel";
 import RevealObserver from "@/components/RevealObserver";
-import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectModal } from "@/components/ProjectModal";
 import { useLang } from "@/lib/i18n";
-import { PROJECTS, SERVICES, PROCESS } from "@/lib/data";
+import { PROJECTS } from "@/lib/data";
 import type { Lang } from "@/lib/data";
 
 type Project = (typeof PROJECTS)[number];
+
+const WHY = [
+  {
+    icon: "⚡",
+    t: { en: "Fast delivery", sq: "Dorëzim i shpejtë" },
+    d: { en: "We move quickly without cutting corners. Most projects launch in 2–4 weeks.", sq: "Lëvizim shpejt pa anashkaluar cilësinë. Shumica e projekteve lansohen në 2–4 javë." },
+  },
+  {
+    icon: "◎",
+    t: { en: "Local & reliable", sq: "Lokal & i besueshëm" },
+    d: { en: "Based in Albania, working with Albanian businesses every day. We understand your market.", sq: "Me bazë në Shqipëri, punojmë me biznese shqiptare çdo ditë. E njohim tregun tuaj." },
+  },
+  {
+    icon: "▣",
+    t: { en: "Full ownership", sq: "Pronësi e plotë" },
+    d: { en: "You own everything — code, domain, hosting. No lock-in, no surprises.", sq: "Ju zotëroni gjithçka — kodin, domenin, hostingun. Pa kufizime, pa surpriza." },
+  },
+  {
+    icon: "◈",
+    t: { en: "Real results", sq: "Rezultate reale" },
+    d: { en: "50+ completed projects. Our clients come back because the work speaks for itself.", sq: "50+ projekte të realizuara. Klientët kthehen sepse puna flet vetë." },
+  },
+  {
+    icon: "◐",
+    t: { en: "Transparent pricing", sq: "Çmime transparente" },
+    d: { en: "No hidden fees. You know what you pay from day one.", sq: "Pa tarifa të fshehura. Dini çfarë paguani nga dita e parë." },
+  },
+  {
+    icon: "◑",
+    t: { en: "After-launch support", sq: "Mbështetje pas lansimit" },
+    d: { en: "We stick around after go-live. Updates, fixes, and growth — we're your long-term partner.", sq: "Mbetemi pas lansimit. Përditësime, rregullime dhe rritje — jemi partneri juaj afatgjatë." },
+  },
+];
+
+const PRICING = [
+  {
+    key: "landing",
+    price: "€150",
+    t: { en: "Landing Page", sq: "Faqe Prezantuese" },
+    d: { en: "Perfect for new businesses or product launches. Fast, beautiful, and conversion-focused.", sq: "Ideal për biznese të reja ose lansime produkti. E shpejtë, e bukur dhe e fokusuar në konversion." },
+    incl: { en: ["1-page responsive design", "Contact form", "SEO basics", "Delivered in 7 days"], sq: ["Dizajn 1-faqësh responsive", "Formë kontakti", "SEO bazë", "Dorëzim në 7 ditë"] },
+    cta: false,
+    hot: false,
+  },
+  {
+    key: "admin",
+    price: "€250",
+    t: { en: "Business + Admin", sq: "Biznes + Admin" },
+    d: { en: "A full website with a dashboard to manage your content, listings, or bookings yourself.", sq: "Faqe e plotë me panel administrimi për të menaxhuar vetë përmbajtjen, listimet ose rezervimet." },
+    incl: { en: ["Multi-page site", "Admin dashboard", "Content management", "SEO optimized", "Mobile ready"], sq: ["Faqe shumë-faqësh", "Panel administrimi", "Menaxhim përmbajtjeje", "SEO e optimizuar", "Gati për mobile"] },
+    cta: false,
+    hot: true,
+  },
+  {
+    key: "ecom",
+    price: "€500",
+    t: { en: "E-commerce / CRM", sq: "E-commerce / CRM" },
+    d: { en: "Full online store or customer management system with payments, orders, and automation.", sq: "Dyqan online i plotë ose sistem menaxhimi klientësh me pagesa, porosi dhe automatizim." },
+    incl: { en: ["Product catalog", "Payment integration", "Order management", "Customer accounts", "Analytics"], sq: ["Katalog produktesh", "Integrim pagesash", "Menaxhim porosish", "Llogari klientësh", "Analitikë"] },
+    cta: false,
+    hot: false,
+  },
+  {
+    key: "custom",
+    price: null,
+    t: { en: "Custom Build", sq: "Ndërtim i Personalizuar" },
+    d: { en: "Complex platform, SaaS, mobile app, or anything that doesn't fit a template. Let's talk.", sq: "Platformë komplekse, SaaS, aplikacion mobile ose çdo gjë që nuk përshtatet në një shabllon. Le të flasim." },
+    incl: { en: ["Requirements workshop", "Custom architecture", "Dedicated team", "Long-term support"], sq: ["Workshop kërkesash", "Arkitekturë e personalizuar", "Ekip i dedikuar", "Mbështetje afatgjatë"] },
+    cta: true,
+    hot: false,
+  },
+];
 
 export default function HomePage() {
   const { lang } = useLang();
@@ -23,14 +95,13 @@ export default function HomePage() {
 
       {/* HERO */}
       <section id="hero">
-        <HeroCanvas />
         <div className="hero-glow" />
         <div className="float-pill fp1">React · Next.js</div>
         <div className="float-pill fp2">Flutter · Dart</div>
         <div className="float-pill fp3">Node.js · Docker</div>
         <div className="float-pill fp4">PostgreSQL</div>
         <div className="hero-inner">
-          <div className="section-label">✦ SOFTWARE STUDIO · EST. 2019</div>
+          <div className="section-label">✦ ALAR DEV · SOFTWARE STUDIO</div>
           <h1 className="hero-headline">
             {lang === "en" ? (
               <>Software solutions<br />for your <span className="gradient-text">success.</span></>
@@ -61,7 +132,10 @@ export default function HomePage() {
       {/* STATS */}
       <StatsCounter />
 
-      {/* FEATURED PROJECTS */}
+      {/* TICKER */}
+      <Ticker />
+
+      {/* FEATURED PROJECTS CAROUSEL */}
       <section id="featured-projects" className="block">
         <div className="container">
           <div className="center reveal">
@@ -71,15 +145,13 @@ export default function HomePage() {
             </h2>
             <p className="section-sub">
               {lang === "en"
-                ? "A selection of what we've built. Each project is a story of a problem solved."
-                : "Një përzgjedhje e asaj që kemi ndërtuar. Çdo projekt është një histori e një problemi të zgjidhur."}
+                ? "Real businesses, real results."
+                : "Biznese reale, rezultate reale."}
             </p>
           </div>
-          <div className="proj-grid">
-            {PROJECTS.slice(0, 4).map((p) => (
-              <ProjectCard key={p.id} p={p} lang={lang as Lang} onOpen={openModal} />
-            ))}
-          </div>
+        </div>
+        <ProjectCarousel onOpen={openModal} />
+        <div className="container">
           <div className="center" style={{ marginTop: 48 }}>
             <Link href="/projects" className="btn btn-ghost">
               {lang === "en" ? "View all projects →" : "Shiko të gjitha projektet →"}
@@ -88,31 +160,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SERVICES PREVIEW */}
-      <section className="block" style={{ background: "linear-gradient(180deg,transparent,rgba(168,85,247,0.03),transparent)" }}>
+      {/* PRICING */}
+      <section className="block" id="pricing">
         <div className="container">
           <div className="center reveal">
-            <div className="section-label">{lang === "en" ? "WHAT WE DO" : "ÇFARË BËJMË"}</div>
+            <div className="section-label">{lang === "en" ? "PRICING" : "ÇMIMET"}</div>
             <h2 className="section-head">
-              {lang === "en" ? <>End-to-end <span className="gradient-text">engineering</span></> : <>Inxhinieri <span className="gradient-text">nga fundi në fund</span></>}
+              {lang === "en" ? <>Simple, <span className="gradient-text">transparent</span> pricing</> : <>Çmime të <span className="gradient-text">thjeshta</span> dhe transparente</>}
             </h2>
             <p className="section-sub">
               {lang === "en"
-                ? "We cover every layer of modern software — from pixel to database to deployment."
-                : "Ne mbulojmë çdo shtresë të softuerit modern — nga pikseli te baza e të dhënave."}
+                ? "No surprises. Pick the plan that fits your project."
+                : "Pa surpriza. Zgjidhni paketën që i përshtatet projektit tuaj."}
             </p>
           </div>
-          <div className="svc-grid">
-            {SERVICES.map((s, i) => (
-              <div key={i} className="svc-card reveal">
-                <ServiceIcon index={i} />
-                <h3 className="svc-title">{s.title[lang as Lang]}</h3>
-                <p className="svc-desc">{s.desc[lang as Lang]}</p>
-                <div className="tech-row">
-                  {s.tech.map((t) => <span key={t} className="tech-pill">{t}</span>)}
+          <div className="pricing-grid">
+            {PRICING.map((plan) => (
+              <div key={plan.key} className={`pricing-card reveal${plan.hot ? " pricing-hot" : ""}`}>
+                {plan.hot && <div className="pricing-badge">{lang === "en" ? "Most Popular" : "Më i Popullarizuar"}</div>}
+                <div className="pricing-top">
+                  <div className="pricing-name">{plan.t[lang as Lang]}</div>
+                  {plan.price
+                    ? <div className="pricing-price">{plan.price}</div>
+                    : <div className="pricing-price pricing-custom">{lang === "en" ? "Let's talk" : "Le të flasim"}</div>
+                  }
+                  <p className="pricing-desc">{plan.d[lang as Lang]}</p>
                 </div>
-                <Link href="/services" className="learn">
-                  {lang === "en" ? "Learn more" : "Mëso më shumë"} <span className="arr">→</span>
+                <ul className="pricing-incl">
+                  {plan.incl[lang as Lang].map((item) => (
+                    <li key={item}>
+                      <span className="pricing-check">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/contact" className={`btn ${plan.hot ? "btn-primary" : "btn-ghost"} pricing-btn`}>
+                  {plan.cta
+                    ? (lang === "en" ? "Get a custom quote →" : "Merr ofertë →")
+                    : (lang === "en" ? "Get started →" : "Fillo →")}
                 </Link>
               </div>
             ))}
@@ -120,28 +205,45 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section className="block">
+      {/* WHY CHOOSE US — editorial layout */}
+      <section className="block why-section">
         <div className="container">
-          <div className="center reveal">
-            <div className="section-label">{lang === "en" ? "PROCESS" : "PROCESI"}</div>
-            <h2 className="section-head">
-              {lang === "en" ? <>How we <span className="gradient-text">work</span></> : <>Si <span className="gradient-text">punojmë</span></>}
-            </h2>
-            <p className="section-sub">
-              {lang === "en"
-                ? "A simple, transparent process from first call to final deployment."
-                : "Një proces i thjeshtë dhe transparent nga thirrja e parë deri në lansim."}
-            </p>
-          </div>
-          <div className="proc-grid">
-            {PROCESS.map((p) => (
-              <div key={p.n} className="proc-step reveal">
-                <div className="proc-num">{p.n}</div>
-                <h4 className="proc-title">{p.t[lang as Lang]}</h4>
-                <p className="proc-desc">{p.d[lang as Lang]}</p>
+          <div className="why-editorial reveal">
+            {/* Left: reasons */}
+            <div className="why-editorial-left">
+              <div className="section-label">{lang === "en" ? "WHY US" : "PSE NE"}</div>
+              <h2 className="section-head" style={{ textAlign: "left", marginTop: 16 }}>
+                {lang === "en" ? <>Why choose <span className="gradient-text">ALAR DEV</span></> : <>Pse zgjidhni <span className="gradient-text">ALAR DEV</span></>}
+              </h2>
+              <div className="why-list">
+                {WHY.map((w, i) => (
+                  <div key={i} className="why-row">
+                    <div className="why-row-num">0{i + 1}</div>
+                    <div>
+                      <h4 className="why-row-title">{w.t[lang as Lang]}</h4>
+                      <p className="why-row-desc">{w.d[lang as Lang]}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+              <Link href="/contact" className="btn btn-primary" style={{ marginTop: 40, alignSelf: "flex-start" }}>
+                {lang === "en" ? "Start your project →" : "Fillo projektin →"}
+              </Link>
+            </div>
+            {/* Right: photo */}
+            <div className="why-editorial-right">
+              <div className="why-photo-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop"
+                  alt="ALAR DEV workspace"
+                  className="why-photo"
+                />
+                <div className="why-photo-badge">
+                  <div className="why-badge-num">50+</div>
+                  <div className="why-badge-lbl">{lang === "en" ? "Projects delivered" : "Projekte të realizuara"}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -166,13 +268,4 @@ export default function HomePage() {
       {modal && <ProjectModal project={modal} lang={lang as Lang} onClose={() => setModal(null)} />}
     </>
   );
-}
-
-function ServiceIcon({ index }: { index: number }) {
-  const icons = [
-    <svg key={0} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9 H21"/><circle cx="6.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="9" cy="6.5" r=".5" fill="currentColor"/></svg>,
-    <svg key={1} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18 H13"/></svg>,
-    <svg key={2} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 10 L10 13 L7 16"/><path d="M13 16 H17"/></svg>,
-  ];
-  return <div className="svc-icon">{icons[index]}</div>;
 }

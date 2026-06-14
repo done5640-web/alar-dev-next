@@ -7,6 +7,7 @@ export const PROJECTS = [
     cat: "Car Rental",
     catKey: "Web App",
     url: "https://www.kdautocar.al",
+    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop",
     desc: {
       en: "Modern car rental platform with online booking, fleet catalog, and real-time availability management system.",
       sq: "Platformë moderne për qiramarrje makinash me rezervim online, katalog flotash dhe sistem menaxhimi të disponueshmërisë.",
@@ -24,6 +25,7 @@ export const PROJECTS = [
     cat: "Construction",
     catKey: "Web App",
     url: "https://www.lunagrup.al",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
     desc: {
       en: "Professional construction company website with project portfolio, services showcase, and client inquiry system.",
       sq: "Faqe profesionale për kompani ndërtimi me portofol projektesh, shërbime dhe formë kontakti për klientë të rinj.",
@@ -41,6 +43,7 @@ export const PROJECTS = [
     cat: "Wellness & Spa",
     catKey: "Web App",
     url: "https://www.senseamassage.al",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop",
     desc: {
       en: "Elegant massage center website with online appointment booking, service showcase, and seamless payment integration.",
       sq: "Faqe elegante për qendër masazhi me sistem rezervimesh online, paraqitje shërbimesh dhe integrimi i pagesave.",
@@ -54,10 +57,11 @@ export const PROJECTS = [
   },
   {
     id: 4,
-    name: "Stacioni i Librasise",
+    name: "Stacioni i Librarise",
     cat: "Online Bookstore",
     catKey: "Platform",
     url: "https://www.stacionilibrarise.al",
+    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop",
     desc: {
       en: "Full-featured online bookstore with complete catalog, advanced search, shopping cart, and integrated payment system.",
       sq: "Dyqan librash online me katalog të plotë, kërkim të avancuar, shportë blerjesh dhe sistem pagesash të integruar.",
@@ -71,10 +75,29 @@ export const PROJECTS = [
   },
   {
     id: 5,
+    name: "Hana Car Rental",
+    cat: "Car Rental",
+    catKey: "Web App",
+    url: "https://www.hana-car-rental.al",
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200&auto=format&fit=crop",
+    desc: {
+      en: "Elegant car rental platform with online booking, multilingual support, and a curated fleet showcase for Albanian travelers.",
+      sq: "Platformë elegante për qiramarrje makinash me rezervim online, mbështetje shumëgjuhëshe dhe shfaqje të flotës për udhëtarët shqiptarë.",
+    },
+    tech: ["React", "Next.js", "Tailwind CSS", "EmailJS"],
+    grad: "linear-gradient(90deg,#8B5CF6,#06B6D4)",
+    long: {
+      en: "Hana Car Rental is a premium car rental service in Albania. We built them a sleek, modern platform focused on converting visitors into bookings — with a curated fleet gallery, multilingual content, and an intuitive online inquiry system.\n\nThe site is fully responsive, fast-loading, and optimized for both local and international travelers searching for rental options in Albania.",
+      sq: "Hana Car Rental është një shërbim premium qiramarrje makinash në Shqipëri. Ndërtuam për ta një platformë moderne dhe elegante të fokusuar në konvertimin e vizitorëve në rezervime — me galeri flotash, përmbajtje shumëgjuhëshe dhe sistem rezervimi online.\n\nFaqja është plotësisht responsive, me ngarkim të shpejtë dhe e optimizuar për udhëtarë vendas dhe ndërkombëtarë.",
+    },
+  },
+  {
+    id: 6,
     name: "Shehu Dekor",
     cat: "Interior Decor",
     catKey: "Web App",
     url: "https://www.shehudekor.al",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
     desc: {
       en: "Modern website for an interior decoration and construction company, featuring a project portfolio, services showcase, and client inquiry system.",
       sq: "Faqe moderne për kompani dekorimi dhe ndërtimi të brendshëm, me portofol projektesh, shërbime dhe sistem kontakti për klientë të rinj.",
@@ -114,6 +137,19 @@ export const SERVICES = [
       sq: ["Dizajn responsive mobile-first", "Optimizim SEO", "Ngarkim i shpejtë", "Forma kontakti dhe rezervimi", "Menaxhim i lehtë i përmbajtjes"],
     },
     cases: { en: ["Restaurant", "Hotel", "Local service"], sq: ["Restorant", "Hotel", "Shërbim lokal"] },
+  },
+  {
+    title: { en: "Mobile Applications", sq: "Aplikacione Mobile" },
+    desc: {
+      en: "Native-quality iOS and Android apps built with Flutter. One codebase, two platforms — no compromise on speed or experience.",
+      sq: "Aplikacione mobile me cilësi native për iOS dhe Android me Flutter. Një bazë kodi, dy platforma — pa kompromis.",
+    },
+    tech: ["Flutter", "Dart", "Firebase", "React Native"],
+    incl: {
+      en: ["iOS & Android from one codebase", "Offline-first architecture", "Push notifications", "App Store & Play Store submission", "In-app payments"],
+      sq: ["iOS & Android nga një bazë kodi", "Arkitekturë offline-first", "Njoftime push", "Dorëzim në App Store & Play Store", "Pagesa brenda aplikacionit"],
+    },
+    cases: { en: ["Consumer app", "Booking app", "Business tool"], sq: ["Aplikacion konsumi", "Aplikacion rezervimi", "Mjet biznesi"] },
   },
   {
     title: { en: "App Maintenance", sq: "Menaxhim Aplikacionesh" },
