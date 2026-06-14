@@ -207,16 +207,6 @@ nav.top .inner {
 .fp3 { bottom: 24%; right: 10%; animation: float 4.5s ease-in-out 1.4s infinite; }
 .fp4 { bottom: 28%; left: 9%; animation: float 3.5s ease-in-out 0.4s infinite; }
 
-.scroll-ind {
-  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
-  color: var(--text-muted); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; z-index: 2;
-}
-.scroll-ind .arrow {
-  width: 1px; height: 18px; background: var(--text-muted); position: relative;
-  animation: bounce 1.5s ease-in-out infinite;
-}
-@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 
 /* Stats */
 #stats {
@@ -756,7 +746,7 @@ input.f.err, select.f.err, textarea.f.err { border-color: #ef4444; }
   #hero { height: auto; min-height: 0; padding-top: 110px; padding-bottom: 64px; }
   .hero-headline { font-size: 36px; line-height: 1.1; margin-top: 12px; }
   .hero-sub { font-size: 17px; }
-  .hero-ctas { margin-top: 28px; }
+  .hero-ctas { margin-top: 48px; }
   .section-head, .page-head h1 { font-size: 28px; }
   .cta-h { font-size: 28px; }
   section.block { padding: 72px 0; }

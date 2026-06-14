@@ -117,10 +117,6 @@ export default function HomePageClient() {
             </Link>
           </div>
         </div>
-        <div className="scroll-ind">
-          <span>{lang === "en" ? "Scroll" : "Lëviz"}</span>
-          <div className="arrow" />
-        </div>
       </section>
 
       {/* STATS */}
