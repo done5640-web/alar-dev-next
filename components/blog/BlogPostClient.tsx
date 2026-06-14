@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useLang } from "@/lib/i18n";
 import type { Lang } from "@/lib/data";
 import type { Post } from "@/lib/blog";
@@ -15,7 +16,7 @@ export default function BlogPostClient({ post, related = [] }: { post: Post; rel
       <RevealObserver />
       <article className="blog-post">
         <div className="blog-post-hero">
-          <img src={post.image} alt={post.imageAlt} className="blog-post-hero-img" />
+          <Image src={post.image} alt={post.imageAlt} className="blog-post-hero-img" fill priority sizes="100vw" />
           <div className="blog-post-hero-overlay" />
           <div className="container blog-post-hero-content">
             <Link href="/blog" className="blog-back">← {l === "en" ? "Back to Blog" : "Kthehu te Blogu"}</Link>
@@ -67,7 +68,7 @@ export default function BlogPostClient({ post, related = [] }: { post: Post; rel
               <div className="blog-related-grid">
                 {related.map((r) => (
                   <Link key={r.slug} href={`/blog/${r.slug}`} className="blog-related-card">
-                    <img src={r.image} alt={r[l].title} className="blog-related-img" />
+                    <Image src={r.image} alt={r[l].title} className="blog-related-img" fill sizes="(max-width: 768px) 100vw, 300px" />
                     <div className="blog-related-body">
                       <span className="blog-related-date">
                         {new Date(r.date).toLocaleDateString(l === "sq" ? "sq-AL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}

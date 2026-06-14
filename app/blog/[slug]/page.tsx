@@ -16,7 +16,7 @@ function buildJsonLd(post: NonNullable<ReturnType<typeof getPost>>) {
     publisher: {
       "@type": "Organization",
       name: "ALAR DEV",
-      logo: { "@type": "ImageObject", url: "https://alardev.al/favicon.svg" },
+      logo: { "@type": "ImageObject", url: "https://alardev.al/icon.png", width: 512, height: 512 },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": `https://alardev.al/blog/${post.slug}` },
     keywords: [...post.en.keywords, ...post.sq.keywords].join(", "),
@@ -36,7 +36,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.en.title,
     description: post.en.excerpt,
     keywords: [...post.en.keywords, ...post.sq.keywords].join(", "),
-    alternates: { canonical: `https://alardev.al/blog/${slug}` },
+    alternates: {
+      canonical: `https://alardev.al/blog/${slug}`,
+      languages: {
+        en: `https://alardev.al/blog/${slug}`,
+        sq: `https://alardev.al/blog/${slug}`,
+        "x-default": `https://alardev.al/blog/${slug}`,
+      },
+    },
     openGraph: {
       title: post.en.title,
       description: post.en.excerpt,

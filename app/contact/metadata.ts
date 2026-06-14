@@ -1,5 +1,31 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Start a project with alardev.al. Tell us about your goals — we respond within 24 hours.",
+  title: "Contact Us — Start Your Project | ALAR DEV Albania",
+  description:
+    "Get in touch with ALAR DEV to start your website, mobile app or software project. Based in Tirana, Albania — we respond within 24 hours. Na kontaktoni për krijim website, aplikacion ose software me porosi.",
+  keywords: [
+    "contact alar dev", "hire web developer albania", "start website project albania",
+    "get a quote website albania", "software company contact albania", "web development quote",
+    "kontakto alar dev", "kerkese oferte website", "fillo projektin tend", "oferte website shqiperi",
+    "zhvillues web kontakt tirane", "studio software kontakt",
+  ].join(", "),
+  alternates: {
+    canonical: "https://alardev.al/contact",
+    languages: { en: "https://alardev.al/contact", sq: "https://alardev.al/contact", "x-default": "https://alardev.al/contact" },
+  },
+  openGraph: {
+    title: "Contact ALAR DEV — Start Your Project",
+    description: "Tell us about your goals — website, app or custom software. Based in Tirana, Albania. We respond within 24 hours.",
+    url: "https://alardev.al/contact",
+    siteName: "ALAR DEV",
+    type: "website",
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "Contact ALAR DEV — Software Studio Albania" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact ALAR DEV — Start Your Project",
+    description: "Website, app or custom software — tell us your goals. We respond within 24 hours.",
+    images: ["https://alardev.al/og-image.png"],
+  },
+  robots: { index: true, follow: true },
 };

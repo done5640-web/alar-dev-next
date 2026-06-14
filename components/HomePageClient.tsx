@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import StatsCounter from "@/components/StatsCounter";
 import Ticker from "@/components/Ticker";
 import ProjectCarousel from "@/components/ProjectCarousel";
@@ -228,10 +229,12 @@ export default function HomePageClient() {
             </div>
             <div className="why-editorial-right">
               <div className="why-photo-wrap">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop"
                   alt="ALAR DEV workspace"
                   className="why-photo"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>

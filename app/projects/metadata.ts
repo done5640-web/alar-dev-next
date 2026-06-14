@@ -1,5 +1,31 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Projects",
-  description: "A selection of what we've built — from enterprise HR platforms to real-time logistics apps and AI-powered document tools.",
+  title: "Projects — Our Work & Portfolio | ALAR DEV Albania",
+  description:
+    "Explore ALAR DEV's project portfolio — enterprise HR platforms, real-time logistics apps, AI-powered document tools, e-commerce stores and more. Built for clients in Albania, Kosovo and worldwide.",
+  keywords: [
+    "alar dev projects", "software portfolio albania", "web development portfolio albania",
+    "projektet tona", "punimet tona shqiperi", "shembuj website shqiperi",
+    "aplikacione te ndertuar shqiperi", "portfolio studio software", "case studies albania",
+    "enterprise software albania", "ecommerce projects albania", "mobile apps portfolio",
+  ].join(", "),
+  alternates: {
+    canonical: "https://alardev.al/projects",
+    languages: { en: "https://alardev.al/projects", sq: "https://alardev.al/projects", "x-default": "https://alardev.al/projects" },
+  },
+  openGraph: {
+    title: "Projects & Portfolio | ALAR DEV — Software Studio Albania",
+    description: "Enterprise HR platforms, logistics apps, AI tools, e-commerce stores — see what we've built for clients in Albania, Kosovo and worldwide.",
+    url: "https://alardev.al/projects",
+    siteName: "ALAR DEV",
+    type: "website",
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Projects Portfolio" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | ALAR DEV — Software Studio Albania",
+    description: "HR platforms, logistics apps, AI tools, e-commerce — see what we've built.",
+    images: ["https://alardev.al/og-image.png"],
+  },
+  robots: { index: true, follow: true },
 };

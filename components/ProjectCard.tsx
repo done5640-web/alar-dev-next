@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from "react";
+import Image from "next/image";
 import type { Lang, PROJECTS } from "@/lib/data";
 
 type Project = (typeof PROJECTS)[number];
@@ -40,7 +41,7 @@ export function ProjectCard({ p, lang }: { p: Project; lang: Lang }) {
     >
       {img && (
         <div className="proj-card-img">
-          <img src={img} alt={p.name} />
+          <Image src={img} alt={p.name} fill sizes="(max-width: 768px) 100vw, 400px" />
           <div className="proj-card-img-overlay" style={{ background: `linear-gradient(to bottom, transparent 40%, rgba(7,8,15,0.95) 100%)` }} />
           <span className="proj-card-cat">{p.cat}</span>
         </div>

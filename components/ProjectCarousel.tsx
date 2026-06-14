@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
 import { useLang } from "@/lib/i18n";
 import { PROJECTS } from "@/lib/data";
 import type { Lang } from "@/lib/data";
@@ -84,7 +85,7 @@ export default function ProjectCarousel() {
               onClick={() => !isCenter && go(offset > 0 ? 1 : -1)}
             >
               <div className="fan-img-wrap">
-                {img && <img src={img} alt={p.name} className="fan-img" />}
+                {img && <Image src={img} alt={p.name} className="fan-img" fill sizes="(max-width: 768px) 90vw, 400px" />}
                 <div className="fan-img-overlay" />
                 <div className="fan-cat">{p.cat}</div>
               </div>

@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="foot-col">
-            <h4>{lang === "en" ? "Company" : "Kompania"}</h4>
+            <p className="foot-col-heading">{lang === "en" ? "Company" : "Kompania"}</p>
             <ul>
               <li><Link href="/">{lang === "en" ? "Home" : "Kryefaqja"}</Link></li>
               <li><Link href="/projects">{lang === "en" ? "Projects" : "Projektet"}</Link></li>
@@ -35,7 +35,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="foot-col">
-            <h4>{lang === "en" ? "Services" : "Shërbime"}</h4>
+            <p className="foot-col-heading">{lang === "en" ? "Services" : "Shërbime"}</p>
             <ul>
               <li><Link href="/services">{lang === "en" ? "Software Development" : "Zhvillim Software"}</Link></li>
               <li><Link href="/services">{lang === "en" ? "Business Websites" : "Website për Biznes"}</Link></li>
@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="foot-col">
-            <h4>{lang === "en" ? "Contact" : "Kontakt"}</h4>
+            <p className="foot-col-heading">{lang === "en" ? "Contact" : "Kontakt"}</p>
             <ul>
               <li><a href="mailto:alar.dev2@gmail.com">alar.dev2@gmail.com</a></li>
               <li><a href="tel:+355694712357">+355 69 471 2357</a></li>

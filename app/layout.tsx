@@ -1,9 +1,17 @@
 ﻿import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ClientEffects from "@/components/ClientEffects";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -110,9 +118,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <link rel="alternate" hrefLang="en" href="https://alardev.al" />
         <link rel="alternate" hrefLang="sq" href="https://alardev.al" />
         <link rel="alternate" hrefLang="x-default" href="https://alardev.al" />
@@ -124,9 +129,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body className={inter.variable}>
         <I18nProvider>
-          <div id="scroll-progress" />
           <div id="cursor" />
           <Nav />
           <main>{children}</main>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { POSTS } from "@/lib/blog";
 import { useLang } from "@/lib/i18n";
 import type { Lang } from "@/lib/data";
@@ -35,7 +36,7 @@ export default function BlogListClient() {
             return (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="blog-card reveal">
                 <div className="blog-card-img">
-                  <img src={post.image} alt={post.imageAlt} loading="lazy" />
+                  <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 768px) 100vw, 400px" />
                   <div className="blog-card-overlay" />
                 </div>
                 <div className="blog-card-body">

@@ -53,9 +53,9 @@ export default function Nav() {
           <div className="nav-right">
             {/* Language toggle — visible on all screen sizes */}
             <div className="lang-toggle">
-              <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")}>EN</button>
-              <span className="lang-pipe" />
               <button className={lang === "sq" ? "active" : ""} onClick={() => setLang("sq")}>SQ</button>
+              <span className="lang-pipe" />
+              <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")}>EN</button>
             </div>
             {/* CTA — desktop only */}
             <Link href="/contact" className="nav-cta desktop-only">

@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     url: "https://alardev.al/blog",
     siteName: "ALAR DEV",
     type: "website",
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Blog — Web Development Albania" }],
   },
   robots: { index: true, follow: true },
 };
