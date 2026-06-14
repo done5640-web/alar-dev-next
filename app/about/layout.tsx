@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     "professional software team", "software agency tirana",
   ].join(", "),
   alternates: {
-    canonical: "https://alar.dev/about",
-    languages: { "en": "https://alar.dev/about", "sq": "https://alar.dev/about", "x-default": "https://alar.dev/about" },
+    canonical: "https://alardev.al/about",
+    languages: { "en": "https://alardev.al/about", "sq": "https://alardev.al/about", "x-default": "https://alardev.al/about" },
   },
   openGraph: {
     title: "About ALAR DEV | Albanian Software Studio",
     description: "A software studio from Albania. 50+ projects delivered. We build fast, you own everything.",
-    url: "https://alar.dev/about",
+    url: "https://alardev.al/about",
     siteName: "ALAR DEV",
     type: "website",
     images: [{ url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", width: 1200, height: 630, alt: "ALAR DEV Team" }],

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     "start a website project", "get a software quote",
   ].join(", "),
   alternates: {
-    canonical: "https://alar.dev/contact",
-    languages: { "en": "https://alar.dev/contact", "sq": "https://alar.dev/contact", "x-default": "https://alar.dev/contact" },
+    canonical: "https://alardev.al/contact",
+    languages: { "en": "https://alardev.al/contact", "sq": "https://alardev.al/contact", "x-default": "https://alardev.al/contact" },
   },
   openGraph: {
     title: "Contact ALAR DEV | Free Quote — Web & App Development Albania",
     description: "Get a free quote for your website, app or custom software. No pitch decks. Just a real conversation. Based in Albania, serving worldwide.",
-    url: "https://alar.dev/contact",
+    url: "https://alardev.al/contact",
     siteName: "ALAR DEV",
     type: "website",
     images: [{ url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", width: 1200, height: 630, alt: "Contact ALAR DEV" }],

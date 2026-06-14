@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   },
   description:
     "ALAR DEV — Albania's leading software studio. We build websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership. Krijim website, zhvillim aplikacione, kompani software Shqipëri.",
-  metadataBase: new URL("https://alar.dev"),
+  metadataBase: new URL("https://alardev.al"),
   keywords: "web development albania, software company albania, krijim website, krijim faqe web, kompani software shqiperi, dizajn website shqiperi, zhvillim aplikacione mobile, mobile app development albania, e-commerce albania, custom software albania, alar dev",
-  authors: [{ name: "ALAR DEV", url: "https://alar.dev" }],
+  authors: [{ name: "ALAR DEV", url: "https://alardev.al" }],
   creator: "ALAR DEV",
   publisher: "ALAR DEV",
   category: "Software Development",
@@ -34,11 +34,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://alar.dev/#organization",
+      "@id": "https://alardev.al/#organization",
       name: "ALAR DEV",
       alternateName: ["ALAR Development", "ALAR DEV Studio", "Alar Dev Shqiperi"],
-      url: "https://alar.dev",
-      logo: { "@type": "ImageObject", url: "https://alar.dev/icon.png", width: 512, height: 512 },
+      url: "https://alardev.al",
+      logo: { "@type": "ImageObject", url: "https://alardev.al/icon.png", width: 512, height: 512 },
       description: "Albania's leading software studio specializing in web development, mobile apps, e-commerce and custom software solutions.",
       foundingDate: "2021",
       areaServed: ["Albania", "Kosovo", "Worldwide"],
@@ -47,7 +47,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         contactType: "customer service",
         availableLanguage: ["Albanian", "English"],
-        url: "https://alar.dev/contact",
+        url: "https://alardev.al/contact",
       },
       sameAs: [
         "https://www.facebook.com/alardev",
@@ -57,10 +57,10 @@ const jsonLd = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://alar.dev/#localbusiness",
+      "@id": "https://alardev.al/#localbusiness",
       name: "ALAR DEV",
       description: "Professional software studio in Tirana, Albania. Web development, mobile apps, e-commerce and custom software.",
-      url: "https://alar.dev",
+      url: "https://alardev.al",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop",
       priceRange: "€€",
       address: { "@type": "PostalAddress", addressLocality: "Tirana", addressCountry: "AL" },
@@ -83,22 +83,22 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://alar.dev/#website",
-      url: "https://alar.dev",
+      "@id": "https://alardev.al/#website",
+      url: "https://alardev.al",
       name: "ALAR DEV",
       description: "Albania's leading software studio",
-      publisher: { "@id": "https://alar.dev/#organization" },
+      publisher: { "@id": "https://alardev.al/#organization" },
       potentialAction: {
         "@type": "SearchAction",
-        target: { "@type": "EntryPoint", urlTemplate: "https://alar.dev/projects?search={search_term_string}" },
+        target: { "@type": "EntryPoint", urlTemplate: "https://alardev.al/projects?search={search_term_string}" },
         "query-input": "required name=search_term_string",
       },
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://alar.dev/#service",
+      "@id": "https://alardev.al/#service",
       name: "ALAR DEV — Software Studio",
-      provider: { "@id": "https://alar.dev/#organization" },
+      provider: { "@id": "https://alardev.al/#organization" },
       serviceType: ["Web Development", "Mobile App Development", "E-commerce Development", "Custom Software Development", "UI/UX Design"],
       areaServed: ["Albania", "Kosovo", "Europe", "Worldwide"],
       availableLanguage: ["Albanian", "English"],
@@ -113,9 +113,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        <link rel="alternate" hrefLang="en" href="https://alar.dev" />
-        <link rel="alternate" hrefLang="sq" href="https://alar.dev" />
-        <link rel="alternate" hrefLang="x-default" href="https://alar.dev" />
+        <link rel="alternate" hrefLang="en" href="https://alardev.al" />
+        <link rel="alternate" hrefLang="sq" href="https://alardev.al" />
+        <link rel="alternate" hrefLang="x-default" href="https://alardev.al" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

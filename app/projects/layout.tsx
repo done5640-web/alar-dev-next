@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     "best web designs albania", "professional web portfolio",
   ].join(", "),
   alternates: {
-    canonical: "https://alar.dev/projects",
-    languages: { "en": "https://alar.dev/projects", "sq": "https://alar.dev/projects", "x-default": "https://alar.dev/projects" },
+    canonical: "https://alardev.al/projects",
+    languages: { "en": "https://alardev.al/projects", "sq": "https://alardev.al/projects", "x-default": "https://alardev.al/projects" },
   },
   openGraph: {
     title: "Portfolio | 50+ Projects — ALAR DEV Albania",
     description: "50+ websites, apps and software products built for Albanian and international businesses. Real results, on time and on budget.",
-    url: "https://alar.dev/projects",
+    url: "https://alardev.al/projects",
     siteName: "ALAR DEV",
     type: "website",
     images: [{ url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", width: 1200, height: 630, alt: "ALAR DEV Portfolio" }],

@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     "wordpress alternatives", "next.js website", "react website",
   ].join(", "),
   alternates: {
-    canonical: "https://alar.dev/services",
-    languages: { "en": "https://alar.dev/services", "sq": "https://alar.dev/services", "x-default": "https://alar.dev/services" },
+    canonical: "https://alardev.al/services",
+    languages: { "en": "https://alardev.al/services", "sq": "https://alardev.al/services", "x-default": "https://alardev.al/services" },
   },
   openGraph: {
     title: "Services | Web Design, Mobile Apps & Custom Software — ALAR DEV",
     description: "Landing pages from €150. Full business sites from €250. E-commerce, mobile apps, custom software. Fast delivery, full ownership.",
-    url: "https://alar.dev/services",
+    url: "https://alardev.al/services",
     siteName: "ALAR DEV",
     type: "website",
     images: [{ url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", width: 1200, height: 630, alt: "ALAR DEV Services" }],

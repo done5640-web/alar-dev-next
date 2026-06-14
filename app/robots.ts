@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: "*", allow: "/" },
     ],
-    sitemap: "https://alar.dev/sitemap.xml",
-    host: "https://alar.dev",
+    sitemap: "https://alardev.al/sitemap.xml",
+    host: "https://alardev.al",
   };
 }

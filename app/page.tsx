@@ -69,18 +69,18 @@ export const metadata: Metadata = {
     "software consulting", "IT consulting", "digital transformation",
   ].join(", "),
   alternates: {
-    canonical: "https://alar.dev",
+    canonical: "https://alardev.al",
     languages: {
-      "en": "https://alar.dev",
-      "sq": "https://alar.dev",
-      "x-default": "https://alar.dev",
+      "en": "https://alardev.al",
+      "sq": "https://alardev.al",
+      "x-default": "https://alardev.al",
     },
   },
   openGraph: {
     title: "ALAR DEV — Software Studio | Web Development Albania",
     description:
       "Albania's leading software studio. Professional websites, mobile apps & custom software. From €150. Fast delivery, full ownership. Serving Tirana, Kosovo and worldwide.",
-    url: "https://alar.dev",
+    url: "https://alardev.al",
     siteName: "ALAR DEV",
     locale: "en_US",
     type: "website",
