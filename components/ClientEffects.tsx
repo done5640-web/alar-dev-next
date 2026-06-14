@@ -8,11 +8,17 @@ export default function ClientEffects() {
     const cursor = document.getElementById("cursor");
     const isTouch = matchMedia("(hover:none)").matches;
 
-    // Scroll progress + nav
+    const heroInner = document.querySelector(".hero-inner") as HTMLElement | null;
+    const heroGlow = document.querySelector(".hero-glow") as HTMLElement | null;
+
+    // Scroll progress + nav + hero parallax
     const onScroll = () => {
       const h = document.documentElement.scrollHeight - window.innerHeight;
       if (prog) prog.style.width = Math.min(100, (window.scrollY / h) * 100) + "%";
       nav?.classList.toggle("scrolled", window.scrollY > 60);
+      const y = window.scrollY;
+      if (heroInner) heroInner.style.transform = `translateY(${y * 0.28}px)`;
+      if (heroGlow) heroGlow.style.transform = `translateY(${y * 0.15}px)`;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
 
