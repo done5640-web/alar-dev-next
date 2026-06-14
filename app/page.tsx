@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HomePageClient from "@/components/HomePageClient";
 
 export const metadata: Metadata = {
-  title: "ALAR DEV — Software Studio | Web Development & Mobile Apps Albania",
+  title: "Krijim Website & Web Design Albania | ALAR DEV — Software Studio Tiranë",
   description:
-    "ALAR DEV is Albania's #1 software studio. We build professional websites, mobile apps, e-commerce platforms and custom software for businesses in Tirana, Kosovo and worldwide. Fast delivery, full ownership, transparent pricing from €150. Krijim website, zhvillim aplikacione, kompani software Shqipëri.",
+    "ALAR DEV — Studio profesionale për krijim website, web design, e-commerce dhe aplikacione mobile në Shqipëri. Krijojmë faqe interneti profesionale nga €150. Albania's leading web design & software studio — websites, mobile apps, e-commerce from €150. Fast delivery, full ownership. Tirana, Kosovo, worldwide.",
   keywords: [
     // Albanian primary
     "krijim website", "krijim faqe web", "krijim faqe interneti", "dizajn website shqiperi",
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "ALAR DEV — Software Studio | Web Development Albania",
+    title: "Krijim Website & Web Design Albania | ALAR DEV Tiranë",
     description:
-      "Albania's leading software studio. Professional websites, mobile apps & custom software. From €150. Fast delivery, full ownership. Serving Tirana, Kosovo and worldwide.",
+      "Studio profesionale për krijim website dhe web design në Shqipëri. Faqe interneti nga €150, aplikacione mobile, e-commerce. Dorëzim i shpejtë, pronësi e plotë.",
     url: "https://alardev.al",
     siteName: "ALAR DEV",
     locale: "en_US",

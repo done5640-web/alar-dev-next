@@ -128,6 +128,77 @@ export default function HomePageClient() {
       {/* TICKER */}
       <Ticker />
 
+      {/* SEO SERVICES OVERVIEW */}
+      <section className="block seo-overview-section">
+        <div className="container">
+          <div className="seo-overview-inner reveal">
+            {lang === "en" ? (
+              <>
+                <h2 className="seo-overview-h">Web Design &amp; Website Development in Albania</h2>
+                <p className="seo-overview-p">ALAR DEV is a professional web design and software development studio based in Tirana, Albania. We create custom websites, e-commerce platforms, mobile apps, and enterprise software for businesses across Albania, Kosovo, and beyond.</p>
+                <div className="seo-overview-grid">
+                  <div className="seo-card">
+                    <h3>Website Creation &amp; Web Design</h3>
+                    <p>Need a professional website for your business? We build fast, modern, SEO-optimized websites — from simple landing pages (€150) to complex multi-page business sites. Every website is mobile-first, responsive, and built to convert visitors into customers.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>E-commerce &amp; Online Stores</h3>
+                    <p>We develop full-featured online stores with product catalogs, shopping carts, and secure payment integration. Whether you're selling clothes, books, food, or services — we build the platform that handles it all.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>Mobile App Development</h3>
+                    <p>iOS and Android apps built with Flutter — one codebase, two platforms, native performance. From booking apps to customer management tools, we deliver mobile experiences that users love.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>Custom Software &amp; Web Applications</h3>
+                    <p>Admin dashboards, CRM systems, booking platforms, SaaS products — if your business needs custom software, we design and build it from scratch. Full ownership, no lock-in, built to scale.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>Web Development for Every Industry</h3>
+                    <p>We've built websites for restaurants, hotels, car rentals, bookstores, construction companies, wellness centers, and more. If your business needs an online presence, we know how to make it work.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>SEO &amp; Digital Presence</h3>
+                    <p>Every website we build is SEO-optimized from day one — fast loading, properly structured, with Google Search Console setup, sitemap submission, and technical SEO included as standard.</p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2 className="seo-overview-h">Krijim Website &amp; Web Design në Shqipëri</h2>
+                <p className="seo-overview-p">ALAR DEV është një studio profesionale e web design dhe zhvillimit të software me bazë në Tiranë, Shqipëri. Krijojmë website, platforma e-commerce, aplikacione mobile dhe software me porosi për biznese në Shqipëri, Kosovë dhe mbarë botën.</p>
+                <div className="seo-overview-grid">
+                  <div className="seo-card">
+                    <h3>Krijim Website &amp; Web Design</h3>
+                    <p>Keni nevojë për një faqe profesionale? Ne ndërtojmë website moderne, të shpejtë dhe të optimizuara për SEO — nga faqe prezantuese (150€) deri te platforma të plota biznesi. Çdo website është mobile-first, responsive dhe i ndërtuar për të kthyer vizitorët në klientë.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>Krijim Dyqan Online &amp; E-commerce</h3>
+                    <p>Ndërtojmë dyqane online të plota me katalog produktesh, shportë blerjesh dhe integrim pagesash të sigurta. Nëse shisni veshje, libra, ushqim ose shërbime — ne ndërtojmë platformën që menaxhon gjithçka.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>Zhvillim Aplikacione Mobile</h3>
+                    <p>Aplikacione iOS dhe Android me Flutter — një bazë kodi, dy platforma, performancë native. Nga aplikacione rezervimi deri te mjete menaxhimi biznesi, ofrojmë eksperienca mobile që përdoruesit i duan.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>Software me Porosi &amp; Web Applications</h3>
+                    <p>Panel administrimi, sisteme CRM, platforma rezervimi, produkte SaaS — nëse biznesi juaj ka nevojë për software të personalizuar, ne e dizajnojmë dhe e ndërtojmë nga zero. Pronësi e plotë, pa kufizime.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>Website për Çdo Industri</h3>
+                    <p>Kemi ndërtuar website për restorante, hotele, kompani makinash me qira, librari, kompani ndërtimi, qendra estetike dhe shumë më shumë. Nëse biznesi juaj ka nevojë për prani online, ne e dimë si ta bëjmë të funksionojë.</p>
+                  </div>
+                  <div className="seo-card">
+                    <h3>SEO &amp; Prani Dixhitale</h3>
+                    <p>Çdo website që ndërtojmë është i optimizuar për SEO që nga dita e parë — ngarkim i shpejtë, strukturë e rregullt, me Google Search Console, sitemap dhe SEO teknik të përfshira si standard.</p>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED PROJECTS CAROUSEL */}
       <section id="featured-projects" className="block">
         <div className="container">

@@ -53,6 +53,13 @@ export function ProjectCard({ p, lang }: { p: Project; lang: Lang }) {
         <div className="tech-row">
           {p.tech.map((t) => <span key={t} className="tech-pill">{t}</span>)}
         </div>
+        {"seoTags" in p && Array.isArray((p as typeof p & { seoTags?: string[] }).seoTags) && (
+          <div className="seo-tags-row">
+            {(p as typeof p & { seoTags: string[] }).seoTags.map((tag) => (
+              <span key={tag} className="seo-tag">{tag}</span>
+            ))}
+          </div>
+        )}
         <div className="proj-bottom">
           <span className="view-link">
             {lang === "en" ? "Visit site" : "Vizito faqen"} <span className="arr">↗</span>
