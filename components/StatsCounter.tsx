@@ -17,27 +17,34 @@ export default function StatsCounter() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const animate = () => {
+      if (animated.current) return;
+      animated.current = true;
+      el.querySelectorAll<HTMLElement>(".num").forEach((num, i) => {
+        const target = stats[i].target;
+        const suf = stats[i].suffix;
+        const start = performance.now();
+        const tick = (now: number) => {
+          const p = Math.min(1, (now - start) / 2000);
+          const eased = 1 - Math.pow(2, -10 * p);
+          num.textContent = Math.round(target * eased) + suf;
+          if (p < 1) requestAnimationFrame(tick);
+          else num.textContent = target + suf;
+        };
+        requestAnimationFrame(tick);
+      });
+    };
+
     const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !animated.current) {
-          animated.current = true;
-          el.querySelectorAll<HTMLElement>(".num").forEach((num, i) => {
-            const target = stats[i].target;
-            const suf = stats[i].suffix;
-            const start = performance.now();
-            const tick = (now: number) => {
-              const p = Math.min(1, (now - start) / 2000);
-              const eased = 1 - Math.pow(2, -10 * p);
-              num.textContent = Math.round(target * eased) + suf;
-              if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-          });
-        }
-      },
-      { threshold: 0.5 }
+      ([entry]) => { if (entry.isIntersecting) animate(); },
+      { threshold: 0.1 }
     );
     obs.observe(el);
+
+    // Fallback: if already visible on mount (e.g. short pages or large screens)
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) animate();
+
     return () => obs.disconnect();
   }, []);
 
