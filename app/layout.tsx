@@ -5,6 +5,7 @@ import { I18nProvider } from "@/lib/i18n";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ClientEffects from "@/components/ClientEffects";
+import DynamicTitle from "@/components/DynamicTitle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={inter.variable}>
         <I18nProvider>
+          <DynamicTitle />
           <div id="cursor" />
           <Nav />
           <main>{children}</main>
