@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "sistem online", "sistem rezervimi online", "panel administrimi", "dashboard admin shqiperi",
     "CRM shqiperi", "SaaS shqiperi", "platforma SaaS shqiperi", "zhvillim platforma",
     "faqe interneti profesionale", "faqe interneti biznesi", "website me cmim te mire",
-    "website lire shqiperi", "mirÃ«mbajtje faqe web", "optimizim SEO shqiperi", "SEO shqiperi",
+    "website lire shqiperi", "mirembajtje faqe web", "optimizim SEO shqiperi", "SEO shqiperi",
     "optimizim motoresh kerkimi shqiperi", "faqe interneti tirane", "website tirane",
     "website durres", "website shkoder", "website vlore", "website fier", "website elbasan",
     "website korce", "website berat", "website lushnje", "website kavaje", "website pogradec",
@@ -70,11 +70,6 @@ export const metadata: Metadata = {
   ].join(", "),
   alternates: {
     canonical: "https://alardev.al",
-    languages: {
-      "en": "https://alardev.al",
-      "sq": "https://alardev.al",
-      "x-default": "https://alardev.al",
-    },
   },
   openGraph: {
     title: "Krijim Website & Web Design Albania | ALAR DEV",

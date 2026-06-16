@@ -1,15 +1,29 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect, type ReactNode } from "react";
 import { useLang } from "@/lib/i18n";
 import type { Lang } from "@/lib/data";
 import type { Post } from "@/lib/blog";
 import RevealObserver from "@/components/RevealObserver";
+import BlogPostBody from "@/components/blog/BlogPostBody";
 
-export default function BlogPostClient({ post, related = [] }: { post: Post; related?: Post[] }) {
+export default function BlogPostClient({
+  post,
+  related = [],
+  serverContent,
+}: {
+  post: Post;
+  related?: Post[];
+  serverContent: ReactNode;
+}) {
   const { lang } = useLang();
   const l = lang as Lang;
   const data = post[l];
+
+  // Start with false so first render matches server HTML (avoids hydration mismatch)
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => { setHydrated(true); }, []);
 
   return (
     <>
@@ -21,9 +35,9 @@ export default function BlogPostClient({ post, related = [] }: { post: Post; rel
           <div className="container blog-post-hero-content">
             <Link href="/blog" className="blog-back">← {l === "en" ? "Back to Blog" : "Kthehu te Blogu"}</Link>
             <div className="section-label" style={{ marginTop: 20 }}>{l === "en" ? "INSIGHTS" : "ARTIKUJ"}</div>
-            <h1 className="blog-post-title">{data.title}</h1>
+            <h1 className="blog-post-title">{hydrated ? data.title : post.en.title}</h1>
             <div className="blog-post-meta">
-              <span>{new Date(post.date).toLocaleDateString(l === "sq" ? "sq-AL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+              <span>{new Date(post.date).toLocaleDateString(hydrated && l === "sq" ? "sq-AL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
               <span className="blog-meta-dot">·</span>
               <span>ALAR DEV</span>
             </div>
@@ -31,36 +45,8 @@ export default function BlogPostClient({ post, related = [] }: { post: Post; rel
         </div>
 
         <div className="container">
-          <div className="blog-post-body reveal">
-            {data.content.map((section, i) => {
-              if (section.h2) return <h2 key={i} className="blog-h2">{section.h2}</h2>;
-              if (section.h3) return <h3 key={i} className="blog-h3">{section.h3}</h3>;
-              if (section.p) return <p key={i} className="blog-p">{section.p}</p>;
-              if (section.ul) return (
-                <ul key={i} className="blog-ul">
-                  {section.ul.map((item, j) => <li key={j}>{item}</li>)}
-                </ul>
-              );
-              if (section.table) return (
-                <div key={i} className="blog-table-wrap">
-                  <table className="blog-table">
-                    <thead><tr>{section.table.headers.map((h, j) => <th key={j}>{h}</th>)}</tr></thead>
-                    <tbody>{section.table.rows.map((row, j) => <tr key={j}>{row.map((cell, k) => <td key={k}>{cell}</td>)}</tr>)}</tbody>
-                  </table>
-                </div>
-              );
-              if (section.cta) return (
-                <div key={i} className="blog-cta-block">
-                  <h3>{l === "en" ? "Ready to start your project?" : "Gati për të filluar projektin tuaj?"}</h3>
-                  <p>{l === "en" ? "No pitch decks. No long contracts. Just a real conversation about your business." : "Pa prezantime. Pa kontrata të gjata. Vetëm një bisedë e vërtetë rreth biznesit tuaj."}</p>
-                  <Link href="/contact" className="btn btn-primary">
-                    {l === "en" ? "Get a free quote →" : "Merr ofertë falas →"}
-                  </Link>
-                </div>
-              );
-              return null;
-            })}
-          </div>
+          {/* Before hydration: server-rendered English content (what Google crawls). After: language-aware content. */}
+          {hydrated ? <BlogPostBody content={data.content} lang={l} /> : serverContent}
 
           {related.length > 0 && (
             <div className="blog-related reveal">
@@ -68,12 +54,12 @@ export default function BlogPostClient({ post, related = [] }: { post: Post; rel
               <div className="blog-related-grid">
                 {related.map((r) => (
                   <Link key={r.slug} href={`/blog/${r.slug}`} className="blog-related-card">
-                    <Image src={r.image} alt={r[l].title} className="blog-related-img" fill sizes="(max-width: 768px) 100vw, 300px" />
+                    <Image src={r.image} alt={r[hydrated ? l : "en"].title} className="blog-related-img" fill sizes="(max-width: 768px) 100vw, 300px" />
                     <div className="blog-related-body">
                       <span className="blog-related-date">
-                        {new Date(r.date).toLocaleDateString(l === "sq" ? "sq-AL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}
+                        {new Date(r.date).toLocaleDateString(hydrated && l === "sq" ? "sq-AL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}
                       </span>
-                      <p className="blog-related-title">{r[l].title}</p>
+                      <p className="blog-related-title">{r[hydrated ? l : "en"].title}</p>
                     </div>
                   </Link>
                 ))}

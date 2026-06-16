@@ -1,65 +1,34 @@
-﻿import type { Metadata } from "next";
-
+import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Services | Web Design, Mobile Apps & Custom Software â€” ALAR DEV Albania",
+  title: "Services — Web Development, Apps & Custom Software | ALAR DEV Albania",
   description:
-    "Professional web development, mobile app creation, e-commerce platforms, admin dashboards and custom software solutions in Albania. Landing pages from â‚¬150, full business sites from â‚¬250. ShÃ«rbimet tona â€” krijim website, aplikacione mobile, e-commerce, software me porosi.",
+    "Professional web development, mobile app development, e-commerce and custom software services in Albania. Fast delivery, full ownership. Shërbime zhvillimi web dhe software në Shqipëri.",
   keywords: [
-    // Albanian services
-    "sherbimet tona shqiperi", "krijim website professional", "krijim faqe web profesionale",
-    "dizajn faqe interneti shqiperi", "zhvillim faqe web shqiperi", "krijim landing page shqiperi",
-    "landing page shqiperi", "faqe prezantuese me cmim te mire", "website 150 euro shqiperi",
-    "website 250 euro shqiperi", "krijim dyqan online shqiperi", "e-commerce shqiperi",
-    "platforma e-commerce shqiperi", "dyqan online professional shqiperi",
-    "krijim aplikacion mobile shqiperi", "zhvillim aplikacione android", "zhvillim aplikacione ios",
-    "aplikacione flutter shqiperi", "aplikacione react native shqiperi",
-    "panel administrimi me porosi", "dashboard admin shqiperi", "sistem menaxhimi shqiperi",
-    "CRM me porosi shqiperi", "sistem rezervimi online shqiperi", "sistem porosish online",
-    "software me porosi shqiperi", "platforma SaaS shqiperi", "zhvillim platforma shqiperi",
-    "API zhvillim shqiperi", "backend zhvillim shqiperi", "frontend zhvillim shqiperi",
-    "dizajn UI UX shqiperi", "dizajn nderfaqe shqiperi", "optimizim faqe web shqiperi",
-    "mirÃ«mbajtje faqe web shqiperi", "hosting dhe domain shqiperi", "SEO shqiperi",
-    "optimizim per motoret e kerkimit", "marketing digjital shqiperi",
-    "krijim faqe restorant shqiperi", "faqe hoteli shqiperi",
-    "faqe pasuri te paluajtshme shqiperi", "faqe klinike shqiperi",
-    "faqe salloni bukurie shqiperi", "faqe biznesi shqiperi",
-    // English services
-    "web development services albania", "website design services albania",
-    "mobile app development services", "e-commerce development albania",
-    "landing page design albania", "landing page from 150 euros", "business website from 250 euros",
-    "custom software development albania", "admin dashboard development albania",
-    "CRM development albania", "SaaS development albania", "booking system development albania",
-    "order management system albania", "inventory system albania",
-    "react development albania", "next.js development albania", "flutter app development albania",
-    "node.js backend albania", "postgresql database albania", "API development albania",
-    "UI UX design albania", "responsive web design albania", "SEO services albania",
-    "website maintenance albania", "website hosting albania",
-    "restaurant website albania", "hotel website albania",
-    "real estate website albania", "medical website albania", "salon website albania",
-    "e-commerce store albania", "online payment integration albania", "stripe integration albania",
-    // International
-    "affordable landing page", "cheap website development", "professional web design affordable",
-    "full stack web development", "custom web application", "bespoke software development",
-    "mobile first web design", "PWA development", "headless CMS development",
-    "wordpress alternatives", "next.js website", "react website",
+    "web development services albania", "mobile app development albania", "e-commerce development albania",
+    "custom software development albania", "landing page albania", "business website albania",
+    "sherbime web shqiperi", "zhvillim faqe web shqiperi", "zhvillim aplikacione mobile shqiperi",
+    "dyqan online shqiperi", "software me porosi shqiperi", "paketa web shqiperi",
   ].join(", "),
   alternates: {
     canonical: "https://alardev.al/services",
-    languages: { "en": "https://alardev.al/services", "sq": "https://alardev.al/services", "x-default": "https://alardev.al/services" },
   },
   openGraph: {
-    title: "Services | Web Design, Mobile Apps & Custom Software â€” ALAR DEV",
-    description: "Landing pages from â‚¬150. Full business sites from â‚¬250. E-commerce, mobile apps, custom software. Fast delivery, full ownership.",
+    title: "Services — Web & Software Development Albania | ALAR DEV",
+    description: "End-to-end web development, mobile apps, e-commerce and custom software in Albania. Fast delivery, full ownership.",
     url: "https://alardev.al/services",
     siteName: "ALAR DEV",
     type: "website",
-    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Services" }],
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Services — Web Development Albania" }],
   },
-  twitter: { card: "summary_large_image", title: "Services | ALAR DEV Albania", description: "Landing pages from â‚¬150. Mobile apps, e-commerce, custom software. Albania's top software studio." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | ALAR DEV — Web & Software Development Albania",
+    description: "Web development, mobile apps, e-commerce and custom software in Albania. Fast delivery, full ownership.",
+    images: ["https://alardev.al/og-image.png"],
+  },
   robots: { index: true, follow: true },
 };
 
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

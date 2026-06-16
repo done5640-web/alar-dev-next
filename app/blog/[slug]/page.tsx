@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { POSTS, getPost } from "@/lib/blog";
 import BlogPostClient from "@/components/blog/BlogPostClient";
+import BlogPostBody from "@/components/blog/BlogPostBody";
 
 function buildJsonLd(post: NonNullable<ReturnType<typeof getPost>>) {
   return {
@@ -38,11 +39,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     keywords: [...post.en.keywords, ...post.sq.keywords].join(", "),
     alternates: {
       canonical: `https://alardev.al/blog/${slug}`,
-      languages: {
-        en: `https://alardev.al/blog/${slug}`,
-        sq: `https://alardev.al/blog/${slug}`,
-        "x-default": `https://alardev.al/blog/${slug}`,
-      },
     },
     openGraph: {
       title: post.en.title,
@@ -67,7 +63,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <BlogPostClient post={post} related={related} />
+      <BlogPostClient post={post} related={related} serverContent={<BlogPostBody content={post.en.content} lang="en" />} />
     </>
   );
 }

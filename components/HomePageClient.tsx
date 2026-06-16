@@ -98,15 +98,15 @@ export default function HomePageClient() {
           <div className="section-label">✦ ALAR DEV · SOFTWARE STUDIO</div>
           <h1 className="hero-headline">
             {lang === "en" ? (
-              <>Software solutions<br />for your <span className="gradient-text">success.</span></>
+              <>Website creation &amp;<br /><span className="gradient-text">software development</span> in Albania.</>
             ) : (
-              <>Zgjidhje software<br />për <span className="gradient-text">suksesin tuaj.</span></>
+              <>Krijim website &amp;<br /><span className="gradient-text">zhvillim software</span> në Shqipëri.</>
             )}
           </h1>
           <p className="hero-sub">
             {lang === "en"
-              ? "Creating web and mobile applications that turn startups and businesses into industry leaders."
-              : "Krijojmë aplikacione web dhe mobile që kthejnë startup-et dhe bizneset në liderë të industrisë."}
+              ? "Professional web design, mobile apps, and custom software for businesses in Albania and Kosovo. Fast delivery, full ownership, from €150."
+              : "Web design profesional, aplikacione mobile dhe software me porosi për biznese në Shqipëri dhe Kosovë. Dorëzim i shpejtë, pronësi e plotë, nga 150€."}
           </p>
           <div className="hero-ctas">
             <Link href="/contact" className="btn btn-primary btn-lg">

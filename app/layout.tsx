@@ -29,8 +29,9 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "ALAR DEV",
     type: "website",
-    locale: "en_US",
-    alternateLocale: ["sq_AL"],
+    locale: "sq_AL",
+    alternateLocale: ["en_US"],
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV — Software Studio Albania" }],
   },
   twitter: { card: "summary_large_image", site: "@alardev" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
@@ -116,11 +117,8 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="sq">
       <head>
-        <link rel="alternate" hrefLang="en" href="https://alardev.al" />
-        <link rel="alternate" hrefLang="sq" href="https://alardev.al" />
-        <link rel="alternate" hrefLang="x-default" href="https://alardev.al" />
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEMJE66YC8" />
         <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NEMJE66YC8');` }} />

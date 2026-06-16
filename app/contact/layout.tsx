@@ -1,49 +1,34 @@
-﻿import type { Metadata } from "next";
-
+import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Contact ALAR DEV | Get a Free Quote â€” Web & App Development Albania",
+  title: "Contact Us — Start Your Project | ALAR DEV Albania",
   description:
-    "Start your project with ALAR DEV today. Get a free quote for your website, mobile app or custom software. Based in Tirana, Albania â€” serving clients worldwide. Na kontaktoni â€” merrni ofertÃ« falas pÃ«r faqen tuaj web ose aplikacionin tuaj.",
+    "Get in touch with ALAR DEV to start your website, mobile app or software project. Based in Tirana, Albania — we respond within 24 hours. Na kontaktoni për krijim website, aplikacion ose software me porosi.",
   keywords: [
-    // Albanian contact
-    "kontaktoni alar dev", "oferte falas website shqiperi", "oferte falas aplikacion mobile",
-    "merr oferte faqe web", "fillo projektin tend shqiperi", "kerkese oferte software",
-    "takim konsultimi shqiperi", "konsultim falas website", "kontakt studio software tirane",
-    "dergoni mesazh alar dev", "porositni website shqiperi", "porositni aplikacion shqiperi",
-    "rezervo konsultim shqiperi", "fillo bashkepunimin shqiperi", "hapni projekt te ri shqiperi",
-    "kohe dorezimi website shqiperi", "cmim website shqiperi", "buxhet website shqiperi",
-    "pagesa website shqiperi", "kontrakte software shqiperi",
-    // English contact
-    "contact alar dev", "get a quote albania", "free quote web development albania",
-    "hire web developer albania", "start a project albania", "request a quote albania",
-    "web development quote albania", "app development quote albania",
-    "software development quote", "book a consultation albania",
-    "free consultation web design", "website cost albania", "how much does a website cost albania",
-    "website price albania", "affordable website quote", "get started web development",
-    "contact software company albania", "reach out software studio albania",
-    "work with us albania", "collaborate albania", "partnership albania",
-    // International
-    "hire web developer", "get a website quote", "request web development services",
-    "affordable website development quote", "free project consultation",
-    "start a website project", "get a software quote",
+    "contact alar dev", "hire web developer albania", "start website project albania",
+    "get a quote website albania", "software company contact albania", "web development quote",
+    "kontakto alar dev", "kerkese oferte website", "fillo projektin tend", "oferte website shqiperi",
+    "zhvillues web kontakt tirane", "studio software kontakt",
   ].join(", "),
   alternates: {
     canonical: "https://alardev.al/contact",
-    languages: { "en": "https://alardev.al/contact", "sq": "https://alardev.al/contact", "x-default": "https://alardev.al/contact" },
   },
   openGraph: {
-    title: "Contact ALAR DEV | Free Quote â€” Web & App Development Albania",
-    description: "Get a free quote for your website, app or custom software. No pitch decks. Just a real conversation. Based in Albania, serving worldwide.",
+    title: "Contact ALAR DEV — Start Your Project",
+    description: "Tell us about your goals — website, app or custom software. Based in Tirana, Albania. We respond within 24 hours.",
     url: "https://alardev.al/contact",
     siteName: "ALAR DEV",
     type: "website",
-    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "Contact ALAR DEV" }],
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "Contact ALAR DEV — Software Studio Albania" }],
   },
-  twitter: { card: "summary_large_image", title: "Contact ALAR DEV | Free Quote", description: "Get a free quote for your website, app or custom software. Albania's top software studio." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact ALAR DEV — Start Your Project",
+    description: "Website, app or custom software — tell us your goals. We respond within 24 hours.",
+    images: ["https://alardev.al/og-image.png"],
+  },
   robots: { index: true, follow: true },
 };
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

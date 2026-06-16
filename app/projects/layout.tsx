@@ -1,49 +1,34 @@
-﻿import type { Metadata } from "next";
-
+import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Portfolio | Web & App Projects â€” ALAR DEV Albania",
+  title: "Projects — Our Work & Portfolio | ALAR DEV Albania",
   description:
-    "Explore 50+ completed projects by ALAR DEV â€” websites, mobile apps and custom software built for Albanian and international businesses. Real results, on time and on budget. Portofoli ynÃ« â€” projektet e realizuara nga ALAR DEV ShqipÃ«ri.",
+    "Explore ALAR DEV's project portfolio — enterprise HR platforms, real-time logistics apps, AI-powered document tools, e-commerce stores and more. Built for clients in Albania, Kosovo and worldwide.",
   keywords: [
-    // Albanian portfolio
-    "portofoli alar dev", "projektet tona shqiperi", "punet tona shqiperi",
-    "shembuj website shqiperi", "website te realizuara shqiperi", "projektet e kryera",
-    "studime rasti shqiperi", "klientet tane shqiperi", "rezultate projekti shqiperi",
-    "aplikacione te ndertuar shqiperi", "faqe web te realizuara", "50 projekte shqiperi",
-    "punime web shqiperi", "dizajn te realizuar shqiperi", "website biznesi shqiperi",
-    "website restoranti i realizuar", "website hoteli i realizuar", "website me foto",
-    "shembuj dizajni website shqiperi", "case study shqiperi",
-    // English portfolio
-    "web development portfolio albania", "software portfolio albania",
-    "completed projects albania", "web design examples albania",
-    "case studies albania", "client work albania", "our work albania",
-    "50 projects albania", "website examples albania", "app portfolio albania",
-    "mobile app examples albania", "e-commerce examples albania",
-    "business websites albania", "restaurant websites albania", "hotel websites albania",
-    "real results web development", "albanian web design portfolio",
-    "alar dev projects", "alar dev portfolio", "alar dev work",
-    // International
-    "web development portfolio", "software company portfolio",
-    "react website examples", "next.js website examples", "flutter app portfolio",
-    "best web designs albania", "professional web portfolio",
+    "alar dev projects", "software portfolio albania", "web development portfolio albania",
+    "projektet tona", "punimet tona shqiperi", "shembuj website shqiperi",
+    "aplikacione te ndertuar shqiperi", "portfolio studio software", "case studies albania",
+    "enterprise software albania", "ecommerce projects albania", "mobile apps portfolio",
   ].join(", "),
   alternates: {
     canonical: "https://alardev.al/projects",
-    languages: { "en": "https://alardev.al/projects", "sq": "https://alardev.al/projects", "x-default": "https://alardev.al/projects" },
   },
   openGraph: {
-    title: "Portfolio | 50+ Projects â€” ALAR DEV Albania",
-    description: "50+ websites, apps and software products built for Albanian and international businesses. Real results, on time and on budget.",
+    title: "Projects & Portfolio | ALAR DEV — Software Studio Albania",
+    description: "Enterprise HR platforms, logistics apps, AI tools, e-commerce stores — see what we've built for clients in Albania, Kosovo and worldwide.",
     url: "https://alardev.al/projects",
     siteName: "ALAR DEV",
     type: "website",
-    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Portfolio" }],
+    images: [{ url: "https://alardev.al/og-image.png", width: 1200, height: 630, alt: "ALAR DEV Projects Portfolio" }],
   },
-  twitter: { card: "summary_large_image", title: "Portfolio | ALAR DEV Albania", description: "50+ completed projects. Websites, apps & custom software for Albanian businesses." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | ALAR DEV — Software Studio Albania",
+    description: "HR platforms, logistics apps, AI tools, e-commerce — see what we've built.",
+    images: ["https://alardev.al/og-image.png"],
+  },
   robots: { index: true, follow: true },
 };
 
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-
