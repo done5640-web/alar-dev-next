@@ -73,6 +73,13 @@ const jsonLd = {
       url: "https://alardev.al",
       image: "https://alardev.al/og-image.png",
       priceRange: "€€",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "9",
+        bestRating: "5",
+        worstRating: "1",
+      },
       address: { "@type": "PostalAddress", addressLocality: "Tirana", addressCountry: "AL" },
       geo: { "@type": "GeoCoordinates", latitude: 41.3275, longitude: 19.8187 },
       openingHoursSpecification: {

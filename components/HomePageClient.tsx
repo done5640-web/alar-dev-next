@@ -238,90 +238,78 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* SERVICES OVERVIEW */}
-      <section className="block services-overview-section">
+      {/* TESTIMONIALS */}
+      <section className="block" id="testimonials">
         <div className="container">
           <div className="center reveal">
-            <div className="section-label">{lang === "en" ? "WHAT WE BUILD" : "ÇFARË NDËRTOJMË"}</div>
+            <div className="section-label">{lang === "en" ? "REVIEWS" : "VLERËSIMET"}</div>
             <h2 className="section-head">
-              {lang === "en"
-                ? <><span className="gradient-text">Web design</span> &amp; software development in Albania</>
-                : <>Web design &amp; zhvillim software <span className="gradient-text">në Shqipëri</span></>}
+              {lang === "en" ? <>What our <span className="gradient-text">clients say</span></> : <>Çfarë thonë <span className="gradient-text">klientët tanë</span></>}
             </h2>
-            <p className="section-sub">
-              {lang === "en"
-                ? "From simple landing pages to full enterprise platforms — we cover every layer of your digital presence."
-                : "Nga faqe prezantuese të thjeshta deri te platforma të plota — mbulojmë çdo shtresë të pranisë suaj digjitale."}
-            </p>
+            <p className="section-sub">5.0 ★★★★★ Google</p>
           </div>
-          <div className="services-ov-grid">
-            {lang === "en" ? (
-              <>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◈</div>
-                  <h3>Website Creation &amp; Web Design</h3>
-                  <p>Fast, modern, SEO-optimized websites from €150 — mobile-first, responsive, built to convert visitors into customers.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◉</div>
-                  <h3>E-commerce &amp; Online Stores</h3>
-                  <p>Full-featured online stores with product catalogs, shopping carts, and secure payment integration for any business type.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◐</div>
-                  <h3>Mobile App Development</h3>
-                  <p>iOS and Android apps built with Flutter — one codebase, two platforms, native performance.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">▣</div>
-                  <h3>Custom Software &amp; Web Apps</h3>
-                  <p>Admin dashboards, CRM systems, SaaS platforms — built from scratch with full ownership and no lock-in.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◑</div>
-                  <h3>Every Industry, Every Scale</h3>
-                  <p>Restaurants, hotels, construction, healthcare, real estate — if your business needs an online presence, we know how to make it work.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">⚡</div>
-                  <h3>SEO &amp; Digital Presence</h3>
-                  <p>Every site ships SEO-ready — fast loading, structured data, Google Search Console, sitemap, and technical SEO included as standard.</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◈</div>
-                  <h3>Krijim Website &amp; Web Design</h3>
-                  <p>Website moderne, të shpejtë dhe SEO-optimizuara nga 150€ — mobile-first, responsive, ndërtuar për të kthyer vizitorët në klientë.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◉</div>
-                  <h3>Dyqan Online &amp; E-commerce</h3>
-                  <p>Dyqane online të plota me katalog produktesh, shportë blerjesh dhe integrim pagesash të sigurta për çdo lloj biznesi.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◐</div>
-                  <h3>Zhvillim Aplikacione Mobile</h3>
-                  <p>Aplikacione iOS dhe Android me Flutter — një bazë kodi, dy platforma, performancë native.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">▣</div>
-                  <h3>Software me Porosi &amp; Web Apps</h3>
-                  <p>Panel administrimi, sisteme CRM, platforma SaaS — ndërtuar nga zero me pronësi të plotë dhe pa kufizime.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">◑</div>
-                  <h3>Çdo Industri, Çdo Shkallë</h3>
-                  <p>Restorante, hotele, ndërtim, shëndetësi, pasuri të paluajtshme — nëse biznesi juaj ka nevojë për prani online, ne e dimë si ta bëjmë të funksionojë.</p>
-                </div>
-                <div className="services-ov-card reveal">
-                  <div className="services-ov-icon">⚡</div>
-                  <h3>SEO &amp; Prani Dixhitale</h3>
-                  <p>Çdo faqe lansohet gati për SEO — ngarkim i shpejtë, të dhëna të strukturuara, Google Search Console dhe SEO teknik si standard.</p>
-                </div>
-              </>
-            )}
+          <div className="testimonials-grid">
+            {[
+              {
+                name: "Kristiana Celaj",
+                text: { en: "I am very satisfied with the service. With the availability, it has been a pleasure to make changes and after we finished, everything was delivered to us on time.", sq: "Jam shumë e kënaqur me shërbimin. Me disponibilitetin, sa herë më është dashur të bëj ndryshime dhe mbasi kemi përfunduar me çdo gjë më janë përgjigjur në kohë rekord." },
+              },
+              {
+                name: "Erisa Kopaci",
+                text: { en: "I had a great experience working with ALAR Dev. The team is professional, talented, and very supportive. They create a positive working environment, value teamwork, and always focus on delivering high-quality solutions. It was a pleasure collaborating with ALAR Dev, and I highly recommend them for their dedication and expertise.", sq: "Pata një përvojë të shkëlqyer duke punuar me ALAR Dev. Ekipi është profesional, i talentuar dhe shumë mbështetës." },
+              },
+              {
+                name: "Arsi Kurti",
+                text: { en: "Excellent service", sq: "Shërbim i shkëlqyer" },
+              },
+            ].map((t, i) => (
+              <div key={i} className="testimonial-card reveal">
+                <div className="testimonial-stars">★★★★★</div>
+                <p className="testimonial-text">"{t.text[lang as "en" | "sq"]}"</p>
+                <div className="testimonial-author">— {t.name}</div>
+              </div>
+            ))}
+          </div>
+          <div className="center" style={{ marginTop: 32 }}>
+            <a href="https://www.google.com/search?q=alar+dev+review#lrd=0x135031774eb30fa9:0x1f4c8aaac5d0f7ef,1,,,," target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+              {lang === "en" ? "See all reviews on Google →" : "Shiko të gjitha vlerësimet në Google →"}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="block" id="faq">
+        <div className="container">
+          <div className="center reveal">
+            <div className="section-label">FAQ</div>
+            <h2 className="section-head">
+              {lang === "en" ? <>Frequently asked <span className="gradient-text">questions</span></> : <>Pyetje të <span className="gradient-text">shpeshta</span></>}
+            </h2>
+          </div>
+          <div className="faq-list reveal">
+            {(lang === "en" ? [
+              { q: "How much does it cost to create a website in Albania?", a: "Prices depend on the scope — a landing page starts from €150, a full business website with admin panel from €250, and an e-commerce store from €500. Custom software and apps are quoted individually. Contact us for a free estimate." },
+              { q: "How long does it take to build a professional website?", a: "Most websites launch within 7–14 days. Simple landing pages can be ready in 7 days. E-commerce stores and custom platforms take 3–6 weeks depending on complexity." },
+              { q: "Which is the best web development company in Albania?", a: "ALAR DEV is a top-rated software studio in Tirana with 7+ years of experience, 50+ completed projects, and a 5.0 Google rating. We specialize in websites, mobile apps, and custom software for Albanian and international businesses." },
+              { q: "Can you create an online store for my business in Albania?", a: "Yes. We build complete e-commerce stores with product catalog, shopping cart, secure payment integration (card, bank transfer), and order management — fully optimized for the Albanian and Balkan market." },
+              { q: "Will my website rank on Google (SEO)?", a: "Every website we build is SEO-optimized from day one — fast loading, mobile-friendly, structured data, sitemap, and Google Search Console setup included as standard. We also offer ongoing SEO services." },
+              { q: "Do I fully own my website after you build it?", a: "Yes — 100%. You own the source code, domain, hosting, and all data. No monthly platform fees, no lock-in. You can take it to any developer in the future." },
+              { q: "Do you build mobile apps for iOS and Android?", a: "Yes. We develop mobile apps for both iOS and Android using Flutter — one codebase, two platforms, and native performance. This reduces cost and time to market significantly." },
+            ] : [
+              { q: "Sa kushton krijimi i një website profesional në Shqipëri?", a: "Çmimet varen nga kompleksiteti — një faqe prezantuese fillon nga 150€, një website biznesi me panel administrimi nga 250€, dhe dyqani online nga 500€. Software dhe aplikacione me porosi ofertë individualisht. Na kontaktoni për vlerësim falas." },
+              { q: "Sa kohë duhet për të krijuar një website?", a: "Shumica e website-ve lansohen brenda 7–14 ditëve. Faqet prezantuese mund të dorëzohen brenda 7 ditëve. Dyqanet online dhe platformat me porosi marrin 3–6 javë." },
+              { q: "Cila është kompania më e mirë e zhvillimit web në Shqipëri?", a: "ALAR DEV është studio software me vlerësim të lartë në Tiranë — 7+ vjet përvojë, 50+ projekte të realizuara dhe vlerësim 5.0 në Google. Specializohemi në website, aplikacione mobile dhe software me porosi." },
+              { q: "A mund të krijoni dyqan online për biznesin tim në Shqipëri?", a: "Po. Ndërtojmë dyqane online të plota me katalog produktesh, shportë blerjesh, integrim pagesash të sigurta dhe menaxhim porosish — të optimizuara për tregun shqiptar dhe ballkanik." },
+              { q: "A do të del website-i im i parë në Google (SEO)?", a: "Çdo website që ndërtojmë vjen i optimizuar për SEO — ngarkim i shpejtë, mobile-friendly, të dhëna të strukturuara, sitemap dhe Google Search Console si standard. Ofrojmë gjithashtu shërbime SEO afatgjata." },
+              { q: "A do të jem pronar i plotë i website-it tim?", a: "Po — 100%. Ju zotëroni kodin burimor, domenin, hostingun dhe të gjitha të dhënat. Pa tarifa mujore, pa kufizime. Mund ta çoni te çdo zhvillues tjetër në të ardhmen." },
+              { q: "A krijoni aplikacione mobile për iOS dhe Android?", a: "Po. Zhvillojmë aplikacione mobile për iOS dhe Android me Flutter — një bazë kodi, dy platforma dhe performancë native. Kjo zvogëlon ndjeshëm koston dhe kohën e zhvillimit." },
+            ]).map((item, i) => (
+              <details key={i} className="faq-item">
+                <summary className="faq-q">{item.q}</summary>
+                <p className="faq-a">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

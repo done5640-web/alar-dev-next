@@ -145,6 +145,92 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* Services Overview */}
+          <div className="services-overview-section" style={{ padding: "80px 0 0" }}>
+            <div className="center reveal">
+              <div className="section-label">{lang === "en" ? "WHAT WE BUILD" : "ÇFARË NDËRTOJMË"}</div>
+              <h2 className="section-head">
+                {lang === "en"
+                  ? <><span className="gradient-text">Web design</span> &amp; software development in Albania</>
+                  : <>Web design &amp; zhvillim software <span className="gradient-text">në Shqipëri</span></>}
+              </h2>
+              <p className="section-sub">
+                {lang === "en"
+                  ? "From simple landing pages to full enterprise platforms — we cover every layer of your digital presence."
+                  : "Nga faqe prezantuese të thjeshta deri te platforma të plota — mbulojmë çdo shtresë të pranisë suaj digjitale."}
+              </p>
+            </div>
+            <div className="services-ov-grid">
+              {lang === "en" ? (
+                <>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◈</div>
+                    <h3>Website Creation &amp; Web Design</h3>
+                    <p>Fast, modern, SEO-optimized websites — mobile-first, responsive, built to convert visitors into customers.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◉</div>
+                    <h3>E-commerce &amp; Online Stores</h3>
+                    <p>Full-featured online stores with product catalogs, shopping carts, and secure payment integration for any business type.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◐</div>
+                    <h3>Mobile App Development</h3>
+                    <p>iOS and Android apps built with Flutter — one codebase, two platforms, native performance.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">▣</div>
+                    <h3>Custom Software &amp; Web Apps</h3>
+                    <p>Admin dashboards, CRM systems, SaaS platforms — built from scratch with full ownership and no lock-in.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◑</div>
+                    <h3>Every Industry, Every Scale</h3>
+                    <p>Restaurants, hotels, construction, healthcare, real estate — if your business needs an online presence, we know how to make it work.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">⚡</div>
+                    <h3>SEO &amp; Digital Presence</h3>
+                    <p>Every site ships SEO-ready — fast loading, structured data, Google Search Console, sitemap, and technical SEO included as standard.</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◈</div>
+                    <h3>Krijim Website &amp; Web Design</h3>
+                    <p>Website moderne, të shpejtë dhe SEO-optimizuara — mobile-first, responsive, ndërtuar për të kthyer vizitorët në klientë.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◉</div>
+                    <h3>Dyqan Online &amp; E-commerce</h3>
+                    <p>Dyqane online të plota me katalog produktesh, shportë blerjesh dhe integrim pagesash të sigurta për çdo lloj biznesi.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◐</div>
+                    <h3>Zhvillim Aplikacione Mobile</h3>
+                    <p>Aplikacione iOS dhe Android me Flutter — një bazë kodi, dy platforma, performancë native.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">▣</div>
+                    <h3>Software me Porosi &amp; Web Apps</h3>
+                    <p>Panel administrimi, sisteme CRM, platforma SaaS — ndërtuar nga zero me pronësi të plotë dhe pa kufizime.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">◑</div>
+                    <h3>Çdo Industri, Çdo Shkallë</h3>
+                    <p>Restorante, hotele, ndërtim, shëndetësi, pasuri të paluajtshme — nëse biznesi juaj ka nevojë për prani online, ne e dimë si ta bëjmë të funksionojë.</p>
+                  </div>
+                  <div className="services-ov-card reveal">
+                    <div className="services-ov-icon">⚡</div>
+                    <h3>SEO &amp; Prani Dixhitale</h3>
+                    <p>Çdo faqe lansohet gati për SEO — ngarkim i shpejtë, të dhëna të strukturuara, Google Search Console dhe SEO teknik si standard.</p>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
           {/* Stack logos */}
           <div className="stack-section reveal">
             <div className="section-label" style={{ marginBottom: 40, textAlign: "center" }}>{lang === "en" ? "OUR STACK" : "TEKNOLOGJITË"}</div>

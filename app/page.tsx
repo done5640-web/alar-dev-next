@@ -97,7 +97,49 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Sa kushton krijimi i një website në Shqipëri?",
+      acceptedAnswer: { "@type": "Answer", text: "Çmimet fillojnë nga një faqe prezantuese bazike deri te platforma të plota e-commerce dhe software me porosi. ALAR DEV ofron zgjidhje për çdo buxhet me dorëzim të shpejtë dhe pronësi të plotë." },
+    },
+    {
+      "@type": "Question",
+      name: "Sa kohë duhet për të krijuar një website profesional?",
+      acceptedAnswer: { "@type": "Answer", text: "Shumica e projekteve lansohen brenda 7–14 ditëve. Faqet prezantuese mund të dorëzohen edhe brenda 7 ditëve, ndërsa platformat më komplekse si e-commerce ose software me porosi marrin 3–6 javë." },
+    },
+    {
+      "@type": "Question",
+      name: "A do të jem pronar i plotë i faqes sime?",
+      acceptedAnswer: { "@type": "Answer", text: "Po, absolutisht. Ju zotëroni gjithçka — kodin burimor, domenin, hostingun dhe të dhënat. Nuk ka kufizime, nuk ka tarifa të fshehura dhe nuk jeni të varur nga ne për të bërë ndryshime." },
+    },
+    {
+      "@type": "Question",
+      name: "A ofron ALAR DEV mbështetje pas lansimit të faqes?",
+      acceptedAnswer: { "@type": "Answer", text: "Po. ALAR DEV ofron mbështetje teknike edhe pas dorëzimit të projektit — përfshirë përditësime, rregullime dhe shtesa të reja. Jemi partneri juaj afatgjatë dixhital." },
+    },
+    {
+      "@type": "Question",
+      name: "A mund të krijoj një dyqan online (e-commerce) në Shqipëri?",
+      acceptedAnswer: { "@type": "Answer", text: "Po. ALAR DEV ndërton dyqane online të plota me katalog produktesh, integrimin e pagesave, menaxhim porosish dhe llogari klientësh — të optimizuara për tregun shqiptar dhe ndërkombëtar." },
+    },
+    {
+      "@type": "Question",
+      name: "What makes ALAR DEV different from other web agencies in Albania?",
+      acceptedAnswer: { "@type": "Answer", text: "ALAR DEV combines fast delivery (most projects in 7–14 days), full code ownership with no lock-in, and deep knowledge of the Albanian and Kosovo markets. With 50+ delivered projects and a 5-star rating, we focus on results over promises." },
+    },
+  ],
+};
+
 export default function HomePage() {
-  return <HomePageClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <HomePageClient />
+    </>
+  );
 }
 
