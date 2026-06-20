@@ -105,8 +105,8 @@ export default function HomePageClient() {
           </h1>
           <p className="hero-sub">
             {lang === "en"
-              ? "Professional web design, mobile apps, and custom software for businesses in Albania and Kosovo. Fast delivery, full ownership, from €150."
-              : "Web design profesional, aplikacione mobile dhe software me porosi për biznese në Shqipëri dhe Kosovë. Dorëzim i shpejtë, pronësi e plotë, nga 150€."}
+              ? "Professional web design, mobile apps, and custom software for businesses in Albania and Kosovo. Fast delivery, full ownership."
+              : "Web design profesional, aplikacione mobile dhe software me porosi për biznese në Shqipëri dhe Kosovë. Dorëzim i shpejtë, pronësi e plotë."}
           </p>
           <div className="hero-ctas">
             <Link href="/contact" className="btn btn-primary btn-lg">
