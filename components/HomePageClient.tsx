@@ -271,7 +271,7 @@ export default function HomePageClient() {
             ))}
           </div>
           <div className="center" style={{ marginTop: 32 }}>
-            <a href="https://www.google.com/search?q=alar+dev+review#lrd=0x135031774eb30fa9:0x1f4c8aaac5d0f7ef,1,,,," target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+            <a href="https://www.google.com/maps/search/ALAR+DEV+Tiran%C3%AB" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
               {lang === "en" ? "See all reviews on Google →" : "Shiko të gjitha vlerësimet në Google →"}
             </a>
           </div>
