@@ -121,6 +121,46 @@ export const PROJECTS = [
       sq: "Shehu Dekor është një kompani dekorimi dhe ndërtimi të brendshëm në Shqipëri. Ndërtuam për ta një faqe moderne dhe vizualisht të pasur për të shfaqur portofolin e projekteve të kryera dhe tërhequr klientë të rinj.\n\nFaqja ka animacione të buta, galeri të plotë projektesh, shpjegim shërbimesh dhe formë kontakti.",
     },
   },
+  {
+    id: 7,
+    name: "AuraVita Dental",
+    cat: "Dental Tourism",
+    catKey: "Web App",
+    seoTags: ["Web Design", "Dental Tourism", "Medical", "Albania"],
+    url: "https://www.auravitaclinic.al/en",
+    image: "/projects/desktop/auravita-desktop.webp",
+    imageMobile: "/projects/desktop/auravita-desktop.webp",
+    desc: {
+      en: "Premium dental tourism website with free consultation booking, service showcase, and multilingual support for international patients.",
+      sq: "Faqe premium për turizëm dentar me rezervim konsulte falas, shfaqje shërbimesh dhe mbështetje shumëgjuhëshe për pacientë ndërkombëtarë.",
+    },
+    tech: ["React", "Next.js", "Tailwind CSS", "EmailJS"],
+    grad: "linear-gradient(90deg,#0D9488,#0891B2)",
+    long: {
+      en: "AuraVita Dental is a premium dental clinic in Tirana, Albania, offering world-class treatments at up to 70% lower cost than Western Europe. We built them a multilingual website designed to attract dental tourists from across Europe.\n\nThe site features a free consultation booking form, a full services showcase, and a clean, trustworthy design that converts international visitors into patients.",
+      sq: "AuraVita Dental është një klinikë dentare premium në Tiranë, Shqipëri, që ofron trajtime me cilësi botërore me kosto deri 70% më të ulët se Europa Perëndimore. Ndërtuam për ta një faqe shumëgjuhëshe për të tërhequr turistë dentar nga e gjithë Europa.\n\nFaqja ka formë rezervimi konsulte falas, shfaqje të plotë shërbimesh dhe dizajn të qartë e të besueshëm.",
+    },
+  },
+  {
+    id: 8,
+    name: "Aiyana Clinic",
+    cat: "Beauty & Wellness",
+    catKey: "Web App",
+    seoTags: ["Web Design", "Beauty Clinic", "Multilingual", "Albania"],
+    url: "https://www.aiyanaclinic.al",
+    image: "/projects/desktop/aiyana-desktop.webp",
+    imageMobile: "/projects/desktop/aiyana-desktop.webp",
+    desc: {
+      en: "Elegant beauty clinic website with multilingual support, service showcase, and appointment booking for premium aesthetic treatments.",
+      sq: "Faqe elegante për klinikë bukurie me mbështetje shumëgjuhëshe, shfaqje shërbimesh dhe rezervim takimesh për trajtime estetike premium.",
+    },
+    tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    grad: "linear-gradient(90deg,#92400E,#B45309)",
+    long: {
+      en: "Aiyana Clinic is a premium beauty and wellness clinic in Albania. We designed and developed an elegant, visually stunning website that perfectly captures their brand identity — sophisticated, warm, and professional.\n\nThe site features a full services showcase, multilingual support in Albanian, English, and Italian, and a seamless appointment booking flow for their international clientele.",
+      sq: "Aiyana Clinic është një klinikë premium bukurie dhe mirëqenie në Shqipëri. Dizajnuam dhe zhvilluam një faqe elegante dhe vizualisht mahnitëse që pasqyron identitetin e markës së tyre.\n\nFaqja ka shfaqje të plotë shërbimesh, mbështetje shumëgjuhëshe në shqip, anglisht dhe italisht, dhe sistem rezervimi takimesh.",
+    },
+  },
 ];
 
 export const SERVICES = [

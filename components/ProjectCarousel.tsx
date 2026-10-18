@@ -7,7 +7,7 @@ import type { Lang } from "@/lib/data";
 
 type Project = (typeof PROJECTS)[number];
 
-const FEATURED_IDS = [5, 3, 4, 2, 1, 6];
+const FEATURED_IDS = [7, 8, 5, 3, 4, 2, 1, 6];
 
 export default function ProjectCarousel() {
   const { lang } = useLang();
