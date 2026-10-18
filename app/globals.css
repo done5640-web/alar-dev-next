@@ -309,7 +309,7 @@ nav.top .inner {
 
 /* FAQ */
 #faq { padding-top: 80px; padding-bottom: 80px; }
-.faq-list { margin: 40px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.faq-list { margin: 40px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
 .faq-item { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.2s; }
 .faq-item[open] { border-color: var(--border-hover); }
 .faq-q { padding: 20px 24px; font-size: 15px; font-weight: 600; color: var(--text-primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }

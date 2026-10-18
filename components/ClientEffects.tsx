@@ -22,8 +22,13 @@ export default function ClientEffects() {
 
     // Cursor
     if (!isTouch && cursor) {
+      cursor.style.opacity = "0";
+      let started = false;
       let cx = 0, cy = 0, tx = 0, ty = 0;
-      const onMove = (e: MouseEvent) => { tx = e.clientX; ty = e.clientY; };
+      const onMove = (e: MouseEvent) => {
+        if (!started) { started = true; cursor.style.opacity = "1"; }
+        tx = e.clientX; ty = e.clientY;
+      };
       document.addEventListener("mousemove", onMove);
       const loop = () => {
         cx += (tx - cx) * 0.1;

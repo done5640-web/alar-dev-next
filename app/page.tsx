@@ -103,33 +103,48 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Sa kushton krijimi i një website në Shqipëri?",
-      acceptedAnswer: { "@type": "Answer", text: "Çmimet fillojnë nga një faqe prezantuese bazike deri te platforma të plota e-commerce dhe software me porosi. ALAR DEV ofron zgjidhje për çdo buxhet me dorëzim të shpejtë dhe pronësi të plotë." },
+      name: "How much does it cost to create a website in Albania?",
+      acceptedAnswer: { "@type": "Answer", text: "At ALAR DEV, a landing page starts from €150, a business website with admin panel from €250, and an e-commerce store from €500. Custom software and mobile apps are quoted individually. Contact ALAR DEV at alardev.al for a free estimate." },
     },
     {
       "@type": "Question",
-      name: "Sa kohë duhet për të krijuar një website profesional?",
-      acceptedAnswer: { "@type": "Answer", text: "Shumica e projekteve lansohen brenda 7–14 ditëve. Faqet prezantuese mund të dorëzohen edhe brenda 7 ditëve, ndërsa platformat më komplekse si e-commerce ose software me porosi marrin 3–6 javë." },
+      name: "Which is the best web development company in Albania?",
+      acceptedAnswer: { "@type": "Answer", text: "ALAR DEV is a top-rated software studio in Tirana, Albania, with 50+ completed projects and a 5.0 Google rating. ALAR DEV specializes in websites, mobile apps, and custom software for Albanian and international businesses. Based in Tirana, serving Albania, Kosovo, and worldwide clients." },
     },
     {
       "@type": "Question",
-      name: "A do të jem pronar i plotë i faqes sime?",
-      acceptedAnswer: { "@type": "Answer", text: "Po, absolutisht. Ju zotëroni gjithçka — kodin burimor, domenin, hostingun dhe të dhënat. Nuk ka kufizime, nuk ka tarifa të fshehura dhe nuk jeni të varur nga ne për të bërë ndryshime." },
+      name: "How long does it take to build a website in Albania?",
+      acceptedAnswer: { "@type": "Answer", text: "ALAR DEV delivers most websites in 7–14 days. Simple landing pages are ready in 7 days. E-commerce stores and custom platforms take 3–6 weeks depending on complexity." },
+    },
+    {
+      "@type": "Question",
+      name: "Do I own my website after ALAR DEV builds it?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes — 100%. ALAR DEV gives you full ownership of everything: source code, domain, hosting, and all data. No monthly platform fees, no lock-in. You can take it to any developer in the future." },
+    },
+    {
+      "@type": "Question",
+      name: "Can ALAR DEV create an online store for my business in Albania?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. ALAR DEV builds complete e-commerce stores with product catalog, shopping cart, secure payment integration, and order management — fully optimized for the Albanian and Balkan market. Prices start from €500." },
+    },
+    {
+      "@type": "Question",
+      name: "Does ALAR DEV build mobile apps for iOS and Android?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. ALAR DEV develops mobile apps for both iOS and Android using Flutter — one codebase, two platforms, native performance. This significantly reduces cost and time to market." },
+    },
+    {
+      "@type": "Question",
+      name: "Sa kushton krijimi i një website profesional në Shqipëri?",
+      acceptedAnswer: { "@type": "Answer", text: "Në ALAR DEV, çmimet varen nga kompleksiteti — një faqe prezantuese fillon nga 150€, një website biznesi me panel administrimi nga 250€, dhe dyqani online nga 500€. Software dhe aplikacione me porosi ofertë individualisht. Na kontaktoni në alardev.al për vlerësim falas." },
+    },
+    {
+      "@type": "Question",
+      name: "Cila është kompania më e mirë e zhvillimit web në Shqipëri?",
+      acceptedAnswer: { "@type": "Answer", text: "ALAR DEV është studio software me vlerësim të lartë në Tiranë, Shqipëri — me 50+ projekte të realizuara dhe vlerësim 5.0 në Google. ALAR DEV specializohet në website, aplikacione mobile dhe software me porosi për biznese shqiptare dhe ndërkombëtare." },
     },
     {
       "@type": "Question",
       name: "A ofron ALAR DEV mbështetje pas lansimit të faqes?",
-      acceptedAnswer: { "@type": "Answer", text: "Po. ALAR DEV ofron mbështetje teknike edhe pas dorëzimit të projektit — përfshirë përditësime, rregullime dhe shtesa të reja. Jemi partneri juaj afatgjatë dixhital." },
-    },
-    {
-      "@type": "Question",
-      name: "A mund të krijoj një dyqan online (e-commerce) në Shqipëri?",
-      acceptedAnswer: { "@type": "Answer", text: "Po. ALAR DEV ndërton dyqane online të plota me katalog produktesh, integrimin e pagesave, menaxhim porosish dhe llogari klientësh — të optimizuara për tregun shqiptar dhe ndërkombëtar." },
-    },
-    {
-      "@type": "Question",
-      name: "What makes ALAR DEV different from other web agencies in Albania?",
-      acceptedAnswer: { "@type": "Answer", text: "ALAR DEV combines fast delivery (most projects in 7–14 days), full code ownership with no lock-in, and deep knowledge of the Albanian and Kosovo markets. With 50+ delivered projects and a 5-star rating, we focus on results over promises." },
+      acceptedAnswer: { "@type": "Answer", text: "Po. ALAR DEV ofron mbështetje teknike edhe pas dorëzimit të projektit — përfshirë përditësime, rregullime dhe shtesa të reja. ALAR DEV është partneri juaj afatgjatë dixhital." },
     },
   ],
 };
