@@ -12,7 +12,7 @@ const WHY = [
   {
     icon: "⚡",
     t: { en: "Fast delivery", sq: "Dorëzim i shpejtë" },
-    d: { en: "We move quickly without cutting corners. Most projects launch in 2–4 weeks.", sq: "Lëvizim shpejt pa anashkaluar cilësinë. Shumica e projekteve lansohen në 2–4 javë." },
+    d: { en: "We move quickly without cutting corners. Most projects launch in 3–5 days.", sq: "Lëvizim shpejt pa anashkaluar cilësinë. Shumica e projekteve lansohen në 3–5 ditë." },
   },
   {
     icon: "◎",
@@ -47,7 +47,7 @@ const PRICING = [
     price: "€150",
     t: { en: "Landing Page", sq: "Faqe Prezantuese" },
     d: { en: "Perfect for new businesses or product launches. Fast, beautiful, and conversion-focused.", sq: "Ideal për biznese të reja ose lansime produkti. E shpejtë, e bukur dhe e fokusuar në konversion." },
-    incl: { en: ["1-page responsive design", "Contact form", "SEO basics", "Delivered in 7 days"], sq: ["Dizajn 1-faqësh responsive", "Formë kontakti", "SEO bazë", "Dorëzim në 7 ditë"] },
+    incl: { en: ["1-page responsive design", "Contact form", "SEO basics", "Delivered in 3 days"], sq: ["Dizajn 1-faqësh responsive", "Formë kontakti", "SEO bazë", "Dorëzim në 3 ditë"] },
     cta: false,
     hot: false,
   },
@@ -208,13 +208,13 @@ export default function HomePageClient() {
                 {lang === "en" ? (
                   <>
                     <p>We've spent years building digital products for Albanian businesses — and we know what actually works. We move fast, we communicate clearly, and we treat every project like our own.</p>
-                    <p>Most sites launch in 7–14 days. You own everything: the code, the domain, the hosting. No lock-in, no hidden fees, no surprises. And when we're done, we don't disappear — we stay as your long-term tech partner.</p>
+                    <p>Most sites launch in 3–5 days. You own everything: the code, the domain, the hosting. No lock-in, no hidden fees, no surprises. And when we're done, we don't disappear — we stay as your long-term tech partner.</p>
                     <p>50+ projects delivered. Our clients come back because the work speaks for itself.</p>
                   </>
                 ) : (
                   <>
                     <p>Kemi kaluar vite duke ndërtuar produkte digjitale për biznese shqiptare — dhe e dimë çfarë funksionon. Lëvizim shpejt, komunikojmë qartë dhe trajtojmë çdo projekt si të ytin.</p>
-                    <p>Shumica e faqeve lansohen në 7–14 ditë. Ju zotëroni gjithçka: kodin, domenin, hostingun. Pa kufizime, pa tarifa të fshehura, pa surpriza. Dhe kur mbarojmë, nuk zhdukem — mbetemi partneri juaj afatgjatë.</p>
+                    <p>Shumica e faqeve lansohen në 3–5 ditë. Ju zotëroni gjithçka: kodin, domenin, hostingun. Pa kufizime, pa tarifa të fshehura, pa surpriza. Dhe kur mbarojmë, nuk zhdukem — mbetemi partneri juaj afatgjatë.</p>
                     <p>50+ projekte të dorëzuara. Klientët kthehen sepse puna flet vetë.</p>
                   </>
                 )}
@@ -290,7 +290,7 @@ export default function HomePageClient() {
           <div className="faq-list reveal">
             {(lang === "en" ? [
               { q: "How much does it cost to create a website in Albania?", a: "Prices depend on the scope — a landing page starts from €150, a full business website with admin panel from €250, and an e-commerce store from €500. Custom software and apps are quoted individually. Contact us for a free estimate." },
-              { q: "How long does it take to build a professional website?", a: "Most websites launch within 7–14 days. Simple landing pages can be ready in 7 days. E-commerce stores and custom platforms take 3–6 weeks depending on complexity." },
+              { q: "How long does it take to build a professional website?", a: "Most websites launch within 3–5 days. Simple landing pages can be ready in 3 days. E-commerce stores and custom platforms take 2–4 weeks depending on complexity." },
               { q: "Which is the best web development company in Albania?", a: "ALAR DEV is a top-rated software studio in Tirana with 7+ years of experience, 50+ completed projects, and a 5.0 Google rating. We specialize in websites, mobile apps, and custom software for Albanian and international businesses." },
               { q: "Can you create an online store for my business in Albania?", a: "Yes. We build complete e-commerce stores with product catalog, shopping cart, secure payment integration (card, bank transfer), and order management — fully optimized for the Albanian and Balkan market." },
               { q: "Will my website rank on Google (SEO)?", a: "Every website we build is SEO-optimized from day one — fast loading, mobile-friendly, structured data, sitemap, and Google Search Console setup included as standard. We also offer ongoing SEO services." },
@@ -298,7 +298,7 @@ export default function HomePageClient() {
               { q: "Do you build mobile apps for iOS and Android?", a: "Yes. We develop mobile apps for both iOS and Android using Flutter — one codebase, two platforms, and native performance. This reduces cost and time to market significantly." },
             ] : [
               { q: "Sa kushton krijimi i një website profesional në Shqipëri?", a: "Çmimet varen nga kompleksiteti — një faqe prezantuese fillon nga 150€, një website biznesi me panel administrimi nga 250€, dhe dyqani online nga 500€. Software dhe aplikacione me porosi ofertë individualisht. Na kontaktoni për vlerësim falas." },
-              { q: "Sa kohë duhet për të krijuar një website?", a: "Shumica e website-ve lansohen brenda 7–14 ditëve. Faqet prezantuese mund të dorëzohen brenda 7 ditëve. Dyqanet online dhe platformat me porosi marrin 3–6 javë." },
+              { q: "Sa kohë duhet për të krijuar një website?", a: "Shumica e website-ve lansohen brenda 3–5 ditëve. Faqet prezantuese mund të dorëzohen brenda 3 ditëve. Dyqanet online dhe platformat me porosi marrin 2–4 javë." },
               { q: "Cila është kompania më e mirë e zhvillimit web në Shqipëri?", a: "ALAR DEV është studio software me vlerësim të lartë në Tiranë — 7+ vjet përvojë, 50+ projekte të realizuara dhe vlerësim 5.0 në Google. Specializohemi në website, aplikacione mobile dhe software me porosi." },
               { q: "A mund të krijoni dyqan online për biznesin tim në Shqipëri?", a: "Po. Ndërtojmë dyqane online të plota me katalog produktesh, shportë blerjesh, integrim pagesash të sigurta dhe menaxhim porosish — të optimizuara për tregun shqiptar dhe ballkanik." },
               { q: "A do të del website-i im i parë në Google (SEO)?", a: "Çdo website që ndërtojmë vjen i optimizuar për SEO — ngarkim i shpejtë, mobile-friendly, të dhëna të strukturuara, sitemap dhe Google Search Console si standard. Ofrojmë gjithashtu shërbime SEO afatgjata." },

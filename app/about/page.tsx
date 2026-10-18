@@ -8,7 +8,7 @@ const WHY = [
   {
     icon: "⚡",
     t: { en: "Fast delivery", sq: "Dorëzim i shpejtë" },
-    d: { en: "We move quickly without cutting corners. Most projects launch in 2–4 weeks.", sq: "Lëvizim shpejt pa anashkaluar cilësinë. Shumica e projekteve lansohen në 2–4 javë." },
+    d: { en: "We move quickly without cutting corners. Most projects launch in 3–5 days.", sq: "Lëvizim shpejt pa anashkaluar cilësinë. Shumica e projekteve lansohen në 3–5 ditë." },
   },
   {
     icon: "◎",
@@ -256,13 +256,13 @@ export default function AboutPage() {
                   {lang === "en" ? (
                     <>
                       <p>We've spent years building digital products for Albanian businesses — and we know what actually works. We move fast, we communicate clearly, and we treat every project like our own.</p>
-                      <p>Most sites launch in 7–14 days. You own everything: the code, the domain, the hosting. No lock-in, no hidden fees, no surprises. And when we're done, we don't disappear — we stay as your long-term tech partner.</p>
+                      <p>Most sites launch in 3–5 days. You own everything: the code, the domain, the hosting. No lock-in, no hidden fees, no surprises. And when we're done, we don't disappear — we stay as your long-term tech partner.</p>
                       <p>50+ projects delivered. Our clients come back because the work speaks for itself.</p>
                     </>
                   ) : (
                     <>
                       <p>Kemi kaluar vite duke ndërtuar produkte digjitale për biznese shqiptare — dhe e dimë çfarë funksionon. Lëvizim shpejt, komunikojmë qartë dhe trajtojmë çdo projekt si të ytin.</p>
-                      <p>Shumica e faqeve lansohen në 7–14 ditë. Ju zotëroni gjithçka: kodin, domenin, hostingun. Pa kufizime, pa tarifa të fshehura, pa surpriza. Dhe kur mbarojmë, nuk zhdukem — mbetemi partneri juaj afatgjatë.</p>
+                      <p>Shumica e faqeve lansohen në 3–5 ditë. Ju zotëroni gjithçka: kodin, domenin, hostingun. Pa kufizime, pa tarifa të fshehura, pa surpriza. Dhe kur mbarojmë, nuk zhdukem — mbetemi partneri juaj afatgjatë.</p>
                       <p>50+ projekte të dorëzuara. Klientët kthehen sepse puna flet vetë.</p>
                     </>
                   )}

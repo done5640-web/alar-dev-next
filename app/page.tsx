@@ -114,7 +114,7 @@ const faqJsonLd = {
     {
       "@type": "Question",
       name: "How long does it take to build a website in Albania?",
-      acceptedAnswer: { "@type": "Answer", text: "ALAR DEV delivers most websites in 7–14 days. Simple landing pages are ready in 7 days. E-commerce stores and custom platforms take 3–6 weeks depending on complexity." },
+      acceptedAnswer: { "@type": "Answer", text: "ALAR DEV delivers most websites in 3–5 days. Simple landing pages are ready in 3 days. E-commerce stores and custom platforms take 2–4 weeks depending on complexity." },
     },
     {
       "@type": "Question",

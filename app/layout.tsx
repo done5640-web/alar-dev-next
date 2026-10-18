@@ -148,7 +148,7 @@ const jsonLd = {
       "@id": "https://alardev.al/#service",
       name: "ALAR DEV — Web Development & Software Studio Albania",
       provider: { "@id": "https://alardev.al/#organization" },
-      description: "ALAR DEV offers web development, mobile app development, e-commerce, and custom software services in Albania and Kosovo. Known for fast delivery (7–14 days), full code ownership, and transparent pricing starting from €150.",
+      description: "ALAR DEV offers web development, mobile app development, e-commerce, and custom software services in Albania and Kosovo. Known for fast delivery (3–5 days), full code ownership, and transparent pricing starting from €150.",
       serviceType: ["Web Development", "Website Design", "Mobile App Development", "E-commerce Development", "Custom Software Development", "UI/UX Design", "SEO Optimization"],
       areaServed: [
         { "@type": "Country", name: "Albania" },
