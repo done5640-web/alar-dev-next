@@ -142,6 +142,26 @@ export const PROJECTS = [
     },
   },
   {
+    id: 9,
+    name: "Areal Clinic",
+    cat: "Aesthetic Clinic",
+    catKey: "Web App",
+    seoTags: ["Web Design", "Aesthetic Clinic", "Beauty", "Albania"],
+    url: "https://www.arealclinic.al",
+    image: "/projects/desktop/areal-desktop.webp",
+    imageMobile: "/projects/desktop/areal-desktop.webp",
+    desc: {
+      en: "Elegant aesthetic clinic website with multilingual support, service showcase, and seamless consultation booking for premium beauty treatments.",
+      sq: "Faqe elegante për klinikë estetike me mbështetje shumëgjuhëshe, shfaqje shërbimesh dhe rezervim konsultash për trajtime bukurie premium.",
+    },
+    tech: ["React", "Next.js", "Tailwind CSS", "EmailJS"],
+    grad: "linear-gradient(90deg,#92400E,#D97706)",
+    long: {
+      en: "Areal Aesthetic Clinic is a premium beauty and wellness clinic in Tirana, Albania. We designed and developed an elegant, visually refined website that embodies their philosophy — beauty, care, and professionalism.\n\nThe site features a full services showcase, multilingual support in Albanian, English, and Italian, and a seamless consultation booking flow for their growing clientele.",
+      sq: "Areal Aesthetic Clinic është një klinikë premium estetike dhe mirëqenie në Tiranë, Shqipëri. Dizajnuam dhe zhvilluam një faqe elegante që mishëron filozofinë e tyre — bukuri, kujdes dhe profesionalizëm.\n\nFaqja ka shfaqje të plotë shërbimesh, mbështetje shumëgjuhëshe dhe sistem rezervimi konsultash.",
+    },
+  },
+  {
     id: 8,
     name: "Aiyana Clinic",
     cat: "Beauty & Wellness",

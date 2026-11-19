@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Services — Web Development, Apps & Custom Software | ALAR DEV Albania",
+  title: "Services — Web Development, Apps & Digital Marketing | ALAR DEV Albania",
   description:
-    "Professional web development, mobile app development, e-commerce and custom software services in Albania. Fast delivery, full ownership. Shërbime zhvillimi web dhe software në Shqipëri.",
+    "Professional web development, mobile apps, PPC management, Meta & Google Ads, and social media marketing in Albania. Build and grow your business with ALAR DEV.",
   keywords: [
-    "web development services albania", "mobile app development albania", "e-commerce development albania",
-    "custom software development albania", "landing page albania", "business website albania",
-    "sherbime web shqiperi", "zhvillim faqe web shqiperi", "zhvillim aplikacione mobile shqiperi",
-    "dyqan online shqiperi", "software me porosi shqiperi", "paketa web shqiperi",
+    "web development services albania", "mobile app development albania", "digital marketing albania",
+    "ppc management albania", "google ads albania", "meta ads albania", "facebook ads albania",
+    "social media marketing albania", "tiktok ads albania", "landing page albania", "business website albania",
+    "sherbime web shqiperi", "zhvillim faqe web shqiperi", "marketing digjital shqiperi",
+    "google ads shqiperi", "meta ads shqiperi", "menaxhim social media shqiperi",
   ].join(", "),
   alternates: {
     canonical: "https://alardev.al/services",
