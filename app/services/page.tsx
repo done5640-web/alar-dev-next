@@ -182,10 +182,10 @@ export default function ServicesPage() {
         <div className="page-hero-glow" />
         <div className="container page-hero-content reveal">
           <div className="section-label">{lang === "en" ? "WHAT WE DO" : "ÇFARË BËJMË"}</div>
-          <h1 className="page-hero-title">
+          <h1 className="page-hero-title" style={{ fontSize: "clamp(28px, 4vw, 48px)" }}>
             {lang === "en"
-              ? <>Build. <span className="gradient-text">Grow.</span> Dominate.</>
-              : <>Ndërto. <span className="gradient-text">Rrit.</span> Domino.</>}
+              ? <>Everything your business <span className="gradient-text">needs online.</span></>
+              : <>Çdo gjë që biznesi juaj <span className="gradient-text">nevojitet online.</span></>}
           </h1>
           <p className="page-hero-sub">
             {lang === "en"
