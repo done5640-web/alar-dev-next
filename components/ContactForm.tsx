@@ -83,11 +83,18 @@ export default function ContactForm() {
       <div className="form-row">
         <label>{t("Project Type", "Lloji i Projektit")}</label>
         <select className={`f${errors.type ? " err" : ""}`} name="type" required onChange={() => clearErr("type")} defaultValue="">
-          <option value="">{t("Choose a type", "Zgjidhni llojin")}</option>
+          <option value="">{t("Choose a service", "Zgjidhni shërbimin")}</option>
           <option>{t("Web Application", "Aplikacion Web")}</option>
           <option>{t("Business Website", "Website Biznesi")}</option>
           <option>{t("Mobile App", "Aplikacion Mobile")}</option>
-          <option>{t("App Maintenance", "Mirëmbajtje Aplikacioni")}</option>
+          <option>{t("App Maintenance", "Mirëmbajtje & Mbështetje")}</option>
+          <option>{t("PPC Management", "Menaxhim PPC")}</option>
+          <option>{t("Social Media Marketing", "Social Media Marketing")}</option>
+          <option>{t("Meta Ads", "Meta Ads")}</option>
+          <option>{t("Google & TikTok Ads", "Google & TikTok Ads")}</option>
+          <option>{t("Bundle — Launch Pack", "Paketë — Launch Pack")}</option>
+          <option>{t("Bundle — Scale Pack", "Paketë — Scale Pack")}</option>
+          <option>{t("Bundle — Dominate Pack", "Paketë — Dominate Pack")}</option>
           <option>{t("Other", "Tjetër")}</option>
         </select>
         {errors.type && <div className="field-err show">{t("This field is required", "Kjo fushë është e detyrueshme")}</div>}
