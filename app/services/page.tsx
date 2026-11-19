@@ -209,7 +209,7 @@ export default function ServicesPage() {
                 {lang === "en" ? "Development" : "Zhvillim"}
               </div>
               <h2 className="svc-col-heading">
-                {lang === "en" ? "Development" : "Zhvillim"}
+                {lang === "en" ? "Web Development" : "Zhvillim Website"}
               </h2>
             </div>
             <div className="svc-col-list">
