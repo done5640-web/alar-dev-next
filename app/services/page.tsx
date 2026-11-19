@@ -209,7 +209,7 @@ export default function ServicesPage() {
                 {lang === "en" ? "Development" : "Zhvillim"}
               </div>
               <h2 className="svc-col-heading">
-                {lang === "en" ? "We build it." : "Ne e ndërtojmë."}
+                {lang === "en" ? "Development" : "Zhvillim"}
               </h2>
             </div>
             <div className="svc-col-list">
@@ -233,7 +233,7 @@ export default function ServicesPage() {
                 {lang === "en" ? "Marketing" : "Marketing"}
               </div>
               <h2 className="svc-col-heading">
-                {lang === "en" ? "We grow it." : "Ne e rritim."}
+                Marketing
               </h2>
             </div>
             <div className="svc-col-list">
