@@ -1070,6 +1070,47 @@ nav.top.scrolled {
 }
 
 /* ============================================================
+   SERVICES — two-column layout
+   ============================================================ */
+.svc-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 56px;
+  margin-top: 56px;
+  align-items: start;
+}
+.svc-col-divider {
+  background: rgba(255,255,255,0.07);
+  align-self: stretch;
+}
+.svc-col-header { margin-bottom: 32px; }
+.svc-col-heading {
+  font-size: 28px; font-weight: 800; color: #fff;
+  letter-spacing: -0.02em; margin: 12px 0 8px;
+}
+.svc-col-sub { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.svc-col-list { display: flex; flex-direction: column; gap: 4px; }
+.svc-col-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.svc-col-item:last-child { border-bottom: none; }
+.svc-col-icon {
+  width: 38px; height: 38px; border-radius: 10px; border: 1px solid;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.svc-col-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.svc-col-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+.svc-col-cta { margin-top: 28px; }
+
+@media (max-width: 860px) {
+  .svc-two-col { grid-template-columns: 1fr; gap: 56px 0; }
+  .svc-col-divider { display: none; }
+}
+
+/* ============================================================
    SERVICES — section headers & bundle cards
    ============================================================ */
 .svc-section-header { text-align: center; margin-bottom: 56px; }
