@@ -211,11 +211,6 @@ export default function ServicesPage() {
               <h2 className="svc-col-heading">
                 {lang === "en" ? "We build it." : "Ne e ndërtojmë."}
               </h2>
-              <p className="svc-col-sub">
-                {lang === "en"
-                  ? "Websites, apps, and platforms — fast, clean, and built to last."
-                  : "Website, aplikacione dhe platforma — të shpejta, të pastra dhe të qëndrueshme."}
-              </p>
             </div>
             <div className="svc-col-list">
               {DEV_SERVICES.map((s, i) => <ServiceItem key={i} s={s} lang={lang as Lang} />)}
@@ -240,11 +235,6 @@ export default function ServicesPage() {
               <h2 className="svc-col-heading">
                 {lang === "en" ? "We grow it." : "Ne e rritim."}
               </h2>
-              <p className="svc-col-sub">
-                {lang === "en"
-                  ? "Paid ads and social media that drive real traffic, leads, and revenue."
-                  : "Reklama me pagesë dhe social media që sjellin trafik, klientë dhe të ardhura reale."}
-              </p>
             </div>
             <div className="svc-col-list">
               {MKT_SERVICES.map((s, i) => <ServiceItem key={i} s={s} lang={lang as Lang} />)}
