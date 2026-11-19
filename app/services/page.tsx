@@ -184,8 +184,8 @@ export default function ServicesPage() {
           <div className="section-label">{lang === "en" ? "WHAT WE DO" : "ÇFARË BËJMË"}</div>
           <h1 className="page-hero-title" style={{ fontSize: "clamp(28px, 4vw, 48px)" }}>
             {lang === "en"
-              ? <>Everything your business <span className="gradient-text">needs online.</span></>
-              : <>Çdo gjë që biznesi juaj <span className="gradient-text">nevojitet online.</span></>}
+              ? <>Our <span className="gradient-text">Services.</span></>
+              : <>Shërbimet <span className="gradient-text">Tona.</span></>}
           </h1>
           <p className="page-hero-sub">
             {lang === "en"
